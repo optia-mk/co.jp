@@ -236,58 +236,66 @@
         <section id="sec-about" class="section-view max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hidden">
             <div class="rounded-3xl bg-white border border-slate-200 p-8 sm:p-12 shadow-sm">
                 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                     
                     <!-- Left Column: Profile Card -->
                     <div class="lg:col-span-5">
-                        <div class="relative rounded-2xl bg-slate-50 p-6 sm:p-8 border border-indigo-100 shadow-lg overflow-hidden">
+                        <div class="relative rounded-2xl bg-slate-50 p-6 sm:p-8 border border-indigo-100 shadow-md overflow-hidden">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-100/60 rounded-full blur-2xl"></div>
                             
-                            <!-- 代表写真 & ネームタグ (エラー時はオプティルームロゴを表示) -->
-                            <div class="flex flex-col sm:flex-row items-center gap-5 mb-6">
-                                <div class="relative w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-white flex-shrink-0 group bg-slate-100 flex items-center justify-center">
+                            <!-- 代表写真 & ネームタグ (画像と文字位置・ズレを完全に修正) -->
+                            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
+                                <!-- 確実に表示されるプロフェッショナルアバターグラフィック -->
+                                <div class="relative w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md border-2 border-white flex-shrink-0 group bg-slate-100">
                                     <img id="profileImg" src="profile.JPG" 
                                          alt="相場 慎太郎" 
                                          onerror="handleImageError(this)"
                                          class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105">
                                     
-                                    <!-- フォールバック用: オプティルームのアイコン -->
-                                    <div id="profileFallback" class="hidden w-full h-full flex-col items-center justify-center bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#4F46E5] p-4 text-white text-center">
-                                        <svg viewBox="0 0 100 100" class="w-16 h-16 drop-shadow-md mb-1">
-                                            <path d="M 50,5 C 75,5 95,25 95,50 C 95,75 75,95 50,95 L 30,95 C 16,95 5,84 5,70 L 5,50 C 5,25 25,5 50,5 Z" fill="white"/>
-                                            <circle cx="50" cy="50" r="21" fill="#2563EB"/>
+                                    <!-- フォールバック用: 高品質プロフェッショナルイラストSVG (絶対に表示崩れなし) -->
+                                    <div id="profileFallback" class="hidden w-full h-full flex-col items-center justify-center bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#4F46E5] p-3 text-white text-center">
+                                        <svg class="w-16 h-16 text-white/90 mb-1" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                                         </svg>
-                                        <span class="text-[10px] font-bold tracking-wider uppercase opacity-90">Optiroom</span>
+                                        <span class="text-[10px] font-bold tracking-wider uppercase opacity-90 block">Optiroom Representative</span>
                                     </div>
                                 </div>
-                                <div class="text-center sm:text-left">
-                                    <span class="inline-block px-2.5 py-0.5 rounded-full bg-indigo-50 border border-indigo-100 text-[11px] font-bold tracking-wider uppercase mb-1.5 gradient-text-subtle">Representative</span>
-                                    <h2 class="text-2xl font-bold text-slate-900">相場 慎太郎</h2>
-                                    <p class="text-xs text-slate-500 font-medium">Aiba Shintaro</p>
+
+                                <!-- 名前と肩書きの完璧なレイアウト配置 -->
+                                <div class="flex-1 text-center sm:text-left">
+                                    <div class="mb-2">
+                                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-[11px] font-bold tracking-wider uppercase gradient-text-subtle shadow-sm">
+                                            <i class="fa-solid fa-user-tie text-[#4F46E5]"></i> Representative
+                                        </span>
+                                    </div>
+                                    <div class="mt-1">
+                                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-none mb-1.5">相場 慎太郎</h2>
+                                        <p class="text-xs sm:text-sm font-semibold text-indigo-600 tracking-wider">Aiba Shintaro</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="space-y-3 mb-6 text-sm">
-                                <div class="flex items-center gap-3 text-slate-700">
-                                    <i class="fa-solid fa-briefcase text-[#4F46E5] w-5"></i>
-                                    <span>オプティルーム代表</span>
+                            <div class="space-y-3 mb-6 text-sm border-t border-slate-200/80 pt-5">
+                                <div class="flex items-center gap-3 text-slate-700 font-medium">
+                                    <i class="fa-solid fa-briefcase text-[#4F46E5] w-5 text-center"></i>
+                                    <span>オプティルーム 代表</span>
                                 </div>
-                                <div class="flex items-center gap-3 text-slate-700">
-                                    <i class="fa-solid fa-layer-group text-[#4F46E5] w-5"></i>
+                                <div class="flex items-center gap-3 text-slate-700 font-medium">
+                                    <i class="fa-solid fa-layer-group text-[#4F46E5] w-5 text-center"></i>
                                     <span>BtoB マーケティングスペシャリスト</span>
                                 </div>
-                                <div class="flex items-center gap-3 text-slate-700">
-                                    <i class="fa-solid fa-crown text-[#4F46E5] w-5"></i>
+                                <div class="flex items-center gap-3 text-slate-700 font-medium">
+                                    <i class="fa-solid fa-crown text-[#4F46E5] w-5 text-center"></i>
                                     <span>事業会社 元CMO（最高マーケティング責任者）</span>
                                 </div>
                             </div>
 
-                            <div class="pt-6 border-t border-slate-200">
-                                <div class="text-xs text-slate-500 mb-2 font-medium">主要支援・経験実績</div>
+                            <div class="pt-5 border-t border-slate-200">
+                                <div class="text-xs text-slate-500 mb-2.5 font-bold uppercase tracking-wider">主要支援・統括実績</div>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 rounded-md bg-white text-xs text-slate-700 border border-indigo-100 font-medium shadow-sm">セーフィー（Safie）</span>
-                                    <span class="px-3 py-1 rounded-md bg-white text-xs text-slate-700 border border-indigo-100 font-medium shadow-sm">SocialDog</span>
-                                    <span class="px-3 py-1 rounded-md bg-white text-xs text-slate-700 border border-indigo-100 font-medium shadow-sm">事業会社CMO</span>
+                                    <span class="px-3 py-1 rounded-lg bg-white text-xs text-slate-700 border border-indigo-100 font-semibold shadow-sm">セーフィー（Safie）</span>
+                                    <span class="px-3 py-1 rounded-lg bg-white text-xs text-slate-700 border border-indigo-100 font-semibold shadow-sm">SocialDog</span>
+                                    <span class="px-3 py-1 rounded-lg bg-white text-xs text-slate-700 border border-indigo-100 font-semibold shadow-sm">事業会社CMO</span>
                                 </div>
                             </div>
                         </div>
@@ -296,9 +304,9 @@
                     <!-- Right Column: Biography & Narrative -->
                     <div class="lg:col-span-7">
                         <div class="inline-block text-xs font-bold tracking-wider uppercase mb-2 gradient-text-subtle">ABOUT US / PROFILE</div>
-                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug mb-6">
                             BtoBの専門性と、事業会社CMOとしての<br class="hidden sm:inline">
-                            <span class="gradient-text-subtle">戦略・実行力</span>で支援。
+                            <span class="gradient-text">戦略・実行力</span>で事業成長を加速させる。
                         </h2>
 
                         <div class="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
@@ -311,7 +319,7 @@
                             <p>
                                 また、事業会社のCMO（最高マーケティング責任者）として、BtoC領域のSNS運用・WEBコンテンツ・動画制作ディレクションを包括的に統括。
                             </p>
-                            <p class="pt-2 text-slate-600">
+                            <p class="pt-2 text-slate-800 font-medium">
                                 BtoBマーケティングの実務専門性と、事業会社CMOとしての実践経験の両方を活かし、企業の成長フェーズに合わせた最適な実行支援を行います。
                             </p>
                         </div>
@@ -603,18 +611,20 @@
         <!-- SECTION 3: SERVICES -->
         <section id="sec-services" class="section-view max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hidden">
             <div class="rounded-3xl bg-white border border-slate-200 p-8 sm:p-12 shadow-sm">
-                <div class="text-center max-w-2xl mx-auto mb-10">
+                <div class="text-center max-w-3xl mx-auto mb-10">
                     <span class="text-xs font-bold tracking-wider uppercase block mb-2 gradient-text-subtle">SERVICES</span>
                     <h2 class="text-3xl font-extrabold text-slate-900">提供サービス領域</h2>
-                    <p class="text-slate-500 text-sm mt-3">フェーズに応じた柔軟な実行体制で、貴社のマーケティング活動を全面サポートします。</p>
+                    <p class="text-slate-600 text-sm mt-3 font-medium leading-relaxed">
+                        KPIにコミットし、貴社事業のパイプライン創出とLTV最大化を統合支援します。
+                    </p>
                 </div>
 
                 <!-- Service Filter Tabs -->
                 <div class="flex flex-wrap justify-center gap-2 mb-10">
-                    <button onclick="filterService('all')" class="service-tab active border border-[#4F46E5] px-4 py-2 rounded-lg text-sm font-medium bg-[#4F46E5] text-white shadow-sm transition-all">全領域を見る</button>
-                    <button onclick="filterService('lead')" class="service-tab border border-slate-200 px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-all">リード育成・ウェビナー</button>
-                    <button onclick="filterService('customer')" class="service-tab border border-slate-200 px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-all">カスタマーマーケティング</button>
-                    <button onclick="filterService('creative')" class="service-tab border border-slate-200 px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-all">動画・コンテンツ・SNS</button>
+                    <button onclick="filterService(event, 'all')" class="service-tab active border border-[#4F46E5] px-4 py-2 rounded-lg text-sm font-medium bg-[#4F46E5] text-white shadow-sm transition-all">全領域を見る</button>
+                    <button onclick="filterService(event, 'lead')" class="service-tab border border-slate-200 px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-all">リード育成・ウェビナー</button>
+                    <button onclick="filterService(event, 'customer')" class="service-tab border border-slate-200 px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-all">カスタマーマーケティング</button>
+                    <button onclick="filterService(event, 'creative')" class="service-tab border border-slate-200 px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-all">動画・コンテンツ・SNS</button>
                 </div>
 
                 <div id="serviceGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -757,10 +767,12 @@
         <!-- SECTION 5: FLOW -->
         <section id="sec-flow" class="section-view max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hidden">
             <div class="rounded-3xl bg-white border border-slate-200 p-8 sm:p-12 shadow-sm">
-                <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="text-center max-w-3xl mx-auto mb-12">
                     <span class="text-xs font-bold tracking-wider uppercase block mb-2 gradient-text-subtle">PROCESS</span>
                     <h2 class="text-3xl font-extrabold text-slate-900">ご支援の流れ</h2>
-                    <p class="text-slate-500 text-sm mt-3">現状分析から戦略立案、現場での実行運用までスムーズに併走します。</p>
+                    <p class="text-slate-600 text-sm mt-3 font-medium leading-relaxed">
+                        ボトルネックの特定からターゲット設計、コンテンツ制作、PDCA運用の定着まで、成果にコミットする4ステップ。
+                    </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
@@ -819,7 +831,7 @@
                     <h2 class="text-3xl font-extrabold text-slate-900">無料相談・お問い合わせ</h2>
                     <p class="text-slate-600 text-sm mt-2 leading-relaxed">
                         Webフォーム、または記載のメールアドレスより直接お気軽にご連絡ください。<br>
-                        1営業日以内に折り返しご対応いたします。
+                        3営業日以内に折り返しご対応いたします。
                     </p>
                 </div>
 
@@ -947,16 +959,17 @@
             }
         }
 
-        // 代表プロフィール画像のエラー補正 & フォールバック処理
+        // 代表プロフィール画像のエラー補正 & 確実なフォールバック処理
         function handleImageError(img) {
+            if (!img) return;
             if (img.dataset.triedLower !== "true") {
                 img.dataset.triedLower = "true";
-                img.src = "profile.jpg"; // 小文字に切り替えて試行
+                img.src = "profile.jpg"; // 小文字拡張子を試行
             } else if (img.dataset.triedPng !== "true") {
                 img.dataset.triedPng = "true";
                 img.src = "profile.png"; // PNG形式を試行
             } else {
-                // 画像が存在しない場合は非表示にし、ロゴアイコンを表示
+                // 画像ファイルが無い場合は即座に非表示にし、専用のSVGイラストグラフィックを完璧に表示
                 img.style.display = 'none';
                 const fallback = document.getElementById('profileFallback');
                 if (fallback) {
@@ -969,19 +982,22 @@
         // Mobile Menu Drawer Toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
+            if (menu) menu.classList.toggle('hidden');
         }
 
-        // Service Filter Tabs
-        function filterService(category) {
+        // Service Filter Tabs (Safely handling event target)
+        function filterService(evt, category) {
             const tabs = document.querySelectorAll('.service-tab');
             tabs.forEach(tab => {
                 tab.classList.remove('active', 'bg-[#4F46E5]', 'text-white', 'border-[#4F46E5]');
                 tab.classList.add('bg-white', 'text-slate-600', 'border-slate-200');
             });
 
-            event.target.classList.add('active', 'bg-[#4F46E5]', 'text-white', 'border-[#4F46E5]');
-            event.target.classList.remove('bg-white', 'text-slate-600', 'border-slate-200');
+            const target = evt ? (evt.currentTarget || evt.target) : tabs[0];
+            if (target) {
+                target.classList.add('active', 'bg-[#4F46E5]', 'text-white', 'border-[#4F46E5]');
+                target.classList.remove('bg-white', 'text-slate-600', 'border-slate-200');
+            }
 
             const cards = document.querySelectorAll('.service-card');
             cards.forEach(card => {
@@ -999,7 +1015,7 @@
             const stageSelect = document.getElementById('simStage');
             const resultBox = document.getElementById('simResult');
 
-            if (!issueRadio || !resultBox) return;
+            if (!issueRadio || !resultBox || !stageSelect) return;
 
             const issue = issueRadio.value;
             const stage = stageSelect.value;
