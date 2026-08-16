@@ -27,7 +27,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
@@ -36,7 +36,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Noto Sans JP"', 'Inter', 'sans-serif'],
+                        sans: ['"Noto Sans JP"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
                     },
                     colors: {
                         opti: {
@@ -54,6 +54,16 @@
     </script>
     
     <style>
+        *, ::before, ::after {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        
+        button, a, input, select, textarea {
+            font-family: inherit;
+        }
+
         .glass-nav {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(16px);
@@ -383,7 +393,7 @@
                 <div class="text-center max-w-2xl mx-auto mb-12">
                     <span class="text-xs font-bold tracking-wider uppercase block mb-2 gradient-text-subtle">CASE STUDIES</span>
                     <h2 class="text-3xl font-extrabold text-slate-900">支援実績・成果事例</h2>
-                    <p class="text-slate-600 text-sm mt-3 font-medium">BtoB領域における課題解決から定量的な成果創出までの代表事例です。</p>
+                    <p class="text-slate-600 text-sm mt-3 font-medium">BtoB事業の課題解決から、定量的な成果創出まで。代表的な支援事例をご紹介します。</p>
                 </div>
 
                 <div class="space-y-12">
