@@ -162,7 +162,7 @@
                 <div class="max-w-3xl mx-auto text-center relative z-10 py-6">
                     <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
                         <span class="w-2 h-2 rounded-full bg-[#4F46E5] animate-pulse"></span>
-                        <span class="gradient-text-subtle">SaaS・IT企業の成長を確実にする実行パートナー</span>
+                        <span class="gradient-text-subtle">BtoB企業の成長を確実にする実行パートナー</span>
                     </div>
 
                     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6">
@@ -171,7 +171,7 @@
                     </h1>
 
                     <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto">
-                        SaaS・IT企業を中心に、施策の実行から改善・運用の伴走まで一貫支援。<br class="hidden sm:inline">
+                        BtoB企業・事業会社を中心に、マーケティング戦略・PMMから施策実行・運用改善まで一貫支援。<br class="hidden sm:inline">
                         パイプライン創出から休眠リードの商談化、カスタマーマーケティングまで事業成長に直結する成果を生み出します。
                     </p>
 
@@ -197,7 +197,7 @@
                             <span class="inline-flex items-center gap-1.5 text-xs text-slate-500 font-medium mb-1">
                                 <i class="fa-solid fa-layer-group text-[#4F46E5]"></i> 専門領域
                             </span>
-                            <span class="text-sm sm:text-base font-extrabold text-slate-900">SaaS / BtoB IT</span>
+                            <span class="text-sm sm:text-base font-extrabold text-slate-900">BtoB事業全般 / SaaS</span>
                         </div>
                         <div class="pt-3 sm:pt-0 sm:px-2 flex flex-col items-center">
                             <span class="inline-flex items-center gap-1.5 text-xs text-slate-500 font-medium mb-1">
@@ -356,13 +356,12 @@
                     <div class="lg:col-span-7">
                         <div class="inline-block text-xs font-bold tracking-wider uppercase mb-2 gradient-text-subtle">ABOUT US / PROFILE</div>
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug mb-6">
-                            BtoBの専門性と、事業会社CMOとしての<br class="hidden sm:inline">
-                            <span class="gradient-text">戦略・実行力</span>で事業成長を加速させる。
+                            BtoBの専門性と、事業会社CMOとしての<br class="hidden sm:inline"><span class="gradient-text">戦略・実行力</span>で事業成長を加速させる。
                         </h2>
 
                         <div class="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
                             <p>
-                                SaaS・IT企業を中心に、マーケティング施策の実行・運用改善から組織伴走まで一貫して支援。
+                                BtoB事業を展開する企業を中心に、戦略立案・PMM・施策実行・運用改善から組織伴走まで一貫して支援。
                             </p>
                             <p>
                                 セーフィー、SocialDogなどでBtoBマーケティングを経験し、チームの立ち上げ、リード創出、ウェビナー、商談化、ナーチャリング、カスタマーマーケティングまで幅広く担当してきました。
@@ -673,13 +672,28 @@
                 <!-- Service Filter Tabs -->
                 <div class="flex flex-wrap justify-center gap-2 mb-10">
                     <button onclick="filterService(event, 'all')" class="service-tab active border border-[#4F46E5] px-4 py-2 rounded-lg text-sm font-medium bg-[#4F46E5] text-white shadow-sm transition-all">全領域を見る</button>
+                    <button onclick="filterService(event, 'pmm')" class="service-tab border border-slate-200 px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-all">マーケティング戦略・PMM</button>
                     <button onclick="filterService(event, 'lead')" class="service-tab border border-slate-200 px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-all">リード育成・ウェビナー</button>
                     <button onclick="filterService(event, 'customer')" class="service-tab border border-slate-200 px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-all">カスタマーマーケティング</button>
                     <button onclick="filterService(event, 'creative')" class="service-tab border border-slate-200 px-4 py-2 rounded-lg text-sm font-medium bg-white text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-all">動画・コンテンツ・SNS</button>
                 </div>
 
-                <div id="serviceGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div id="serviceGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     
+                    <!-- Card 0: Marketing Strategy & PMM -->
+                    <div class="service-card pmm p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm card-hover">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-100 text-[#4F46E5] flex items-center justify-center mb-4 text-lg">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">マーケティング戦略・PMM</h3>
+                        <p class="text-xs text-slate-500 mb-4">GTM戦略からポジショニング、メッセージング設計まで事業基盤を構築。</p>
+                        <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-200 pt-3">
+                            <li>・マーケティング / Go-to-Market戦略設計</li>
+                            <li>・ターゲット顧客・ペルソナ設計＆顧客理解</li>
+                            <li>・市場・競合分析＆プロダクトポジショニング</li>
+                        </ul>
+                    </div>
+
                     <!-- Card 1: Lead Gen -->
                     <div class="service-card lead p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm card-hover">
                         <div class="w-10 h-10 rounded-lg bg-indigo-100 text-[#4F46E5] flex items-center justify-center mb-4 text-lg">
@@ -687,7 +701,7 @@
                         </div>
                         <h3 class="text-lg font-bold text-slate-900 mb-2">リード育成・ナーチャリング</h3>
                         <p class="text-xs text-slate-500 mb-4">休眠リードの商談化、ウェビナー企画運用までパイプラインを拡大。</p>
-                        <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-200 pt-3">
+                        <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-200 pt-3">
                             <li>・ウェビナー企画・集客・運営統括</li>
                             <li>・休眠リードの商談化シナリオ設計</li>
                             <li>・メールマーケティング＆MA実務運用</li>
@@ -701,7 +715,7 @@
                         </div>
                         <h3 class="text-lg font-bold text-slate-900 mb-2">カスタマーマーケティング</h3>
                         <p class="text-xs text-slate-500 mb-4">既存顧客の活用、LTV最大化およびチャーン（解約率）改善を推進。</p>
-                        <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-200 pt-3">
+                        <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-200 pt-3">
                             <li>・カスタマーマーケチーム立ち上げ支援</li>
                             <li>・アップセル / クロスセル施策の実行</li>
                             <li>・チャーン（解約率）改善アプローチ</li>
@@ -715,7 +729,7 @@
                         </div>
                         <h3 class="text-lg font-bold text-slate-900 mb-2">動画・コンテンツ・SNS統括</h3>
                         <p class="text-xs text-slate-500 mb-4">ブランド世界観の構築からSEO記事、動画コンテンツ制作ディレクションまでカバー。</p>
-                        <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-200 pt-3">
+                        <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-200 pt-3">
                             <li>・SEO / WEBコンテンツマーケティング</li>
                             <li>・SNSアカウント設計・運用実行</li>
                             <li>・動画コンテンツ企画・ディレクション</li>
@@ -762,17 +776,17 @@
                             </label>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <label class="cursor-pointer border border-slate-200 p-3.5 rounded-xl bg-white hover:border-[#4F46E5] transition-all flex items-start gap-3 shadow-sm">
-                                    <input type="radio" name="simIssue" value="dormant" checked onchange="calculatePlan()" class="mt-1 text-[#4F46E5] focus:ring-[#4F46E5]">
+                                    <input type="radio" name="simIssue" value="pmm" checked onchange="calculatePlan()" class="mt-1 text-[#4F46E5] focus:ring-[#4F46E5]">
                                     <div>
-                                        <div class="text-xs font-bold text-slate-900">休眠リードの商談化・ナーチャリング</div>
-                                        <div class="text-[11px] text-slate-500 mt-0.5">リードはあるが商談に繋がっていない</div>
+                                        <div class="text-xs font-bold text-slate-900">戦略設計・GTM・ポジショニング</div>
+                                        <div class="text-[11px] text-slate-500 mt-0.5">ターゲット・訴求軸・市場参入戦略を明確にしたい</div>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer border border-slate-200 p-3.5 rounded-xl bg-white hover:border-[#4F46E5] transition-all flex items-start gap-3 shadow-sm">
-                                    <input type="radio" name="simIssue" value="webinar" onchange="calculatePlan()" class="mt-1 text-[#4F46E5] focus:ring-[#4F46E5]">
+                                    <input type="radio" name="simIssue" value="dormant" onchange="calculatePlan()" class="mt-1 text-[#4F46E5] focus:ring-[#4F46E5]">
                                     <div>
-                                        <div class="text-xs font-bold text-slate-900">ウェビナー・新規リード獲得</div>
-                                        <div class="text-[11px] text-slate-500 mt-0.5">企画・運営のリソースが不足している</div>
+                                        <div class="text-xs font-bold text-slate-900">休眠リードの商談化・ナーチャリング</div>
+                                        <div class="text-[11px] text-slate-500 mt-0.5">リードはあるが商談に繋がっていない</div>
                                     </div>
                                 </label>
                                 <label class="cursor-pointer border border-slate-200 p-3.5 rounded-xl bg-white hover:border-[#4F46E5] transition-all flex items-start gap-3 shadow-sm">
@@ -785,8 +799,8 @@
                                 <label class="cursor-pointer border border-slate-200 p-3.5 rounded-xl bg-white hover:border-[#4F46E5] transition-all flex items-start gap-3 shadow-sm">
                                     <input type="radio" name="simIssue" value="creative" onchange="calculatePlan()" class="mt-1 text-[#4F46E5] focus:ring-[#4F46E5]">
                                     <div>
-                                        <div class="text-xs font-bold text-slate-900">動画・SNS・コンテンツ活用</div>
-                                        <div class="text-[11px] text-slate-500 mt-0.5">認知獲得やブランディング力を高めたい</div>
+                                        <div class="text-xs font-bold text-slate-900">動画・コンテンツ・SNS</div>
+                                        <div class="text-[11px] text-slate-500 mt-0.5">動画活用・オウンドメディア・SNS運用等を進めたい</div>
                                     </div>
                                 </label>
                             </div>
@@ -889,7 +903,7 @@
                 <!-- 直接メール連絡用ボックス -->
                 <div class="mb-8 p-5 rounded-2xl bg-indigo-50/70 border border-indigo-100 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div class="text-left">
-                        <div class="text-xs font-bold text-slate-500 mb-0.5">直接メールでのお問い合わせ</div>
+                        <div class="text-xs font-bold text-slate-500 mb-0.5">直接メールでのお問い合わせ（optiroom@outlook.jp）</div>
                         <div class="text-base sm:text-lg font-extrabold text-indigo-900 select-all">optiroom@outlook.jp</div>
                     </div>
                     <a href="mailto:optiroom@outlook.jp?subject=【Optiroom】Webサイトよりお問い合わせ" class="whitespace-nowrap px-5 py-2.5 rounded-xl bg-white text-[#4F46E5] border border-indigo-200 font-bold text-xs hover:bg-indigo-50 transition-all flex items-center gap-2 shadow-sm">
@@ -898,12 +912,18 @@
                     </a>
                 </div>
 
-                <!-- シンプルなお問い合わせフォーム -->
-                <form id="contactForm" action="https://formsubmit.co/optiroom@outlook.jp" method="POST" class="space-y-5">
+                <!-- 送信完了メッセージエリア -->
+                <div id="formSuccessMsg" class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium text-center">
+                    <i class="fa-solid fa-circle-check text-emerald-600 mr-2"></i> お問い合わせ内容を送信いたしました。確認次第ご連絡させていただきます。
+                </div>
+
+                <!-- シンプルなお問い合わせフォーム (FormSubmit確実化) -->
+                <form id="contactForm" action="https://formsubmit.co/optiroom@outlook.jp" method="POST" class="space-y-5" onsubmit="return handleFormSubmit(event)">
                     <!-- FormSubmit 設定用隠しフィールド -->
                     <input type="hidden" name="_subject" value="【Optiroom Web】新しいお問い合わせ">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_autoresponse" value="お問い合わせありがとうございます。内容を確認のうえ折り返しご連絡いたします。">
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
@@ -923,12 +943,12 @@
 
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1.5">ご相談内容 <span class="text-red-500">*</span></label>
-                        <textarea id="contactMessage" name="ご相談内容" required rows="4" placeholder="ご相談内容や課題感（例: 休眠リードの商談化、ウェビナーの相談など）をご記入ください。" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#4F46E5] focus:bg-white transition-all"></textarea>
+                        <textarea id="contactMessage" name="ご相談内容" required rows="4" placeholder="ご相談内容や課題感（例: 休眠リードの商談化、動画・SNS運用の相談など）をご記入ください。" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#4F46E5] focus:bg-white transition-all"></textarea>
                     </div>
 
                     <button type="submit" id="submitBtn" class="w-full py-4 rounded-xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#4F46E5] text-white font-bold text-base shadow-lg shadow-indigo-500/20 hover:opacity-95 transition-all flex items-center justify-center gap-2">
                         <i class="fa-solid fa-paper-plane text-sm"></i>
-                        <span>送信する（無料相談）</span>
+                        <span id="btnText">送信する（無料相談）</span>
                     </button>
                 </form>
 
@@ -983,65 +1003,56 @@
     </footer>
 
     <script>
-        // タブ切り替え処理
-        function switchTab(tabName) {
-            const sections = ['home', 'about', 'cases', 'strengths', 'services', 'simulator', 'flow', 'contact'];
-            
-            // 各セクションの表示/非表示切り替え
-            sections.forEach(s => {
-                const secEl = document.getElementById('sec-' + s);
-                if (secEl) {
-                    if (s === tabName) {
-                        secEl.classList.remove('hidden');
-                    } else {
-                        secEl.classList.add('hidden');
-                    }
-                }
-            });
+        // タブ切替処理
+        function switchTab(targetId) {
+            const sections = document.querySelectorAll('.section-view');
+            sections.forEach(sec => sec.classList.add('hidden'));
 
-            // ヘッダーナビゲーションボタンのアクティブ表示更新
+            const targetSection = document.getElementById('sec-' + targetId);
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+            }
+
+            // ナビゲーションのハイライト更新
             const navBtns = document.querySelectorAll('.nav-tab-btn');
             navBtns.forEach(btn => {
-                const target = btn.getAttribute('data-target');
-                if (target === tabName) {
+                if (btn.getAttribute('data-target') === targetId) {
                     btn.classList.add('text-[#4F46E5]', 'font-bold', 'bg-indigo-50');
-                    btn.classList.remove('text-slate-600');
                 } else {
                     btn.classList.remove('text-[#4F46E5]', 'font-bold', 'bg-indigo-50');
-                    btn.classList.add('text-slate-600');
                 }
             });
 
-            // ページ上部へスムーズスクロール
+            // ページ上部へ移動
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Mobile Menu Drawer Toggle
+        // モバイルメニュー開閉処理
         function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            if (menu) menu.classList.toggle('hidden');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('hidden');
+            }
         }
 
-        // Service Filter Tabs (Safely handling event target)
-        function filterService(evt, category) {
+        // サービス領域の絞り込み処理
+        function filterService(event, category) {
             const tabs = document.querySelectorAll('.service-tab');
             tabs.forEach(tab => {
-                tab.classList.remove('active', 'bg-[#4F46E5]', 'text-white', 'border-[#4F46E5]');
-                tab.classList.add('bg-white', 'text-slate-600', 'border-slate-200');
+                tab.classList.remove('bg-[#4F46E5]', 'text-white');
+                tab.classList.add('bg-white', 'text-slate-600');
             });
-
-            const target = evt ? (evt.currentTarget || evt.target) : tabs[0];
-            if (target) {
-                target.classList.add('active', 'bg-[#4F46E5]', 'text-white', 'border-[#4F46E5]');
-                target.classList.remove('bg-white', 'text-slate-600', 'border-slate-200');
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.remove('bg-white', 'text-slate-600');
+                event.currentTarget.classList.add('bg-[#4F46E5]', 'text-white');
             }
 
             const cards = document.querySelectorAll('.service-card');
             cards.forEach(card => {
                 if (category === 'all' || card.classList.contains(category)) {
-                    card.style.display = 'block';
+                    card.classList.remove('hidden');
                 } else {
-                    card.style.display = 'none';
+                    card.classList.add('hidden');
                 }
             });
         }
@@ -1061,22 +1072,22 @@
             let planDesc = "";
             let keyFeatures = [];
 
-            if (issue === 'dormant') {
+            if (issue === 'pmm') {
+                planTitle = "マーケティング戦略 ＆ GTM・ポジショニング設計プラン";
+                planDesc = "市場・競合分析からペルソナ定義、ポジショニング・メッセージング設計まで一貫して構築します。";
+                keyFeatures = ["Go-to-Market(GTM)戦略・ペルソナ設計", "市場・競合分析＆プロダクトポジショニング定義", "メッセージング・訴求軸設計および認知促進施策"];
+            } else if (issue === 'dormant') {
                 planTitle = "休眠リード商談化＆ナーチャリング伴走プラン";
                 planDesc = "保有リードのデータベースを活性化し、購買意欲が高まるシナリオとコンテンツで効率よく商談に引き上げます。";
                 keyFeatures = ["休眠リードのセグメント設計＆メール配信", "ウェビナー連携によるホットリード抽出", "MAツールの本格運用＆シナリオ実装"];
-            } else if (issue === 'webinar') {
-                planTitle = "ウェビナー企画・獲得プロデュースプラン";
-                planDesc = "集客企画、登壇資料構成、当日の進行統括までワンストップで代行し、継続的な新規リード獲得エンジンを構築します。";
-                keyFeatures = ["共催/単独ウェビナーの企画ディレクション", "集客LP・ハウスリスト向け集客メールの作成", "アフターフォロー連絡・商談獲得フロー構築"];
+            } else if (issue === 'creative') {
+                planTitle = "CMO思考 × 動画・SNS・コンテンツ統括プラン";
+                planDesc = "事業会社CMOとしてのノウハウを活用し、認知獲得からファン形成までのコンテンツ・動画・SNS施策を包括プロデュースします。";
+                keyFeatures = ["BtoB向け動画コンテンツの企画・制作指示", "SNS（Twitter/LinkedIn/YouTube等）の設計運用", "検索意図を捉えたオウンドメディア・SEOプロデュース"];
             } else if (issue === 'churn') {
                 planTitle = "カスタマーマーケティング＆LTV最大化プラン";
-                planDesc = "チャーン（解約）率の削減と既存顧客のアップセル/クロスセルを促進し、SaaS特有のLTV向上に貢献します。";
+                planDesc = "チャーン（解約）率の削減と既存顧客のアップセル/クロスセルを促進し、LTV向上に貢献します。";
                 keyFeatures = ["カスタマーサクセス連携とチャーン要因分析", "既存ユーザー向け限定セミナー＆コミュニティ化", "アップセル用導入事例コンテンツの作成"];
-            } else {
-                planTitle = "CMO思考 × 動画・SNS・コンテンツ統括プラン";
-                planDesc = "事業会社CMOとしてのノウハウを活用し、認知獲得からファン形成までのコンテンツ施策を包括プロデュースします。";
-                keyFeatures = ["BtoB向け動画コンテンツの企画・制作指示", "SNS（Twitter/LinkedIn/YouTube等）の設計運用", "検索意図を捉えたSEOコンテンツプロデュース"];
             }
 
             let stageBadge = stage === 'seed' ? "初期伴走型" : stage === 'growth' ? "標準伴走型" : "全社横断強化型";
@@ -1111,6 +1122,24 @@
                 contactMsg.value = `【課題診断結果よりお問合せ】\n推奨プラン：「${planTitle}」について詳細を聞きたいです。\n\n具体的には以下の課題感を持っています:\n`;
                 contactMsg.focus();
             }
+        }
+
+        // フォーム送信ハンドラー（確実な送信とユーザーフィードバック）
+        function handleFormSubmit(e) {
+            const btnText = document.getElementById('btnText');
+            const submitBtn = document.getElementById('submitBtn');
+            const successMsg = document.getElementById('formSuccessMsg');
+
+            if (submitBtn) submitBtn.disabled = true;
+            if (btnText) btnText.textContent = "送信中...";
+
+            // FormSubmit standard form submission carries on, but show client message after standard submit trigger
+            setTimeout(() => {
+                if (successMsg) successMsg.classList.remove('hidden');
+                if (btnText) btnText.textContent = "送信完了";
+            }, 1000);
+
+            return true;
         }
 
         // Initialize on load
