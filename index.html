@@ -302,9 +302,9 @@
         <section id="sec-about" class="section-view max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hidden">
             <div class="rounded-3xl bg-white border border-slate-200 p-8 sm:p-12 shadow-sm">
                 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                     
-                    <!-- Left Column: Profile Card -->
+                    <!-- Left Column: Profile Card (名前の箱) -->
                     <div class="lg:col-span-5">
                         <div class="relative rounded-2xl bg-gradient-to-br from-slate-50 via-indigo-50/40 to-slate-50 p-6 sm:p-8 border border-indigo-100 shadow-md overflow-hidden">
                             
@@ -328,22 +328,23 @@
                                 </div>
                             </div>
 
-                            <div class="mb-6">
-                                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-none mb-2">相場 慎太郎</h2>
-                                <p class="text-xs sm:text-sm font-bold text-[#4F46E5] tracking-widest uppercase">Aiba Shintaro</p>
+                            <!-- 名前の配置と表記を完璧に揃えて整流化 -->
+                            <div class="mb-6 flex flex-col justify-start items-start">
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-tight">相場 慎太郎</h2>
+                                <p class="text-xs font-extrabold text-[#4F46E5] tracking-[0.2em] uppercase mt-1.5 leading-none">AIBA SHINTARO</p>
                             </div>
 
                             <div class="space-y-3 mb-6 text-xs sm:text-sm border-t border-slate-200/80 pt-5">
-                                <div class="flex items-start gap-3 text-slate-700 font-medium">
-                                    <i class="fa-solid fa-briefcase text-[#4F46E5] w-5 shrink-0 text-center mt-0.5"></i>
+                                <div class="flex items-center gap-3 text-slate-700 font-medium">
+                                    <i class="fa-solid fa-briefcase text-[#4F46E5] w-5 shrink-0 text-center"></i>
                                     <span class="leading-snug">オプティア代表</span>
                                 </div>
-                                <div class="flex items-start gap-3 text-slate-700 font-medium">
-                                    <i class="fa-solid fa-layer-group text-[#4F46E5] w-5 shrink-0 text-center mt-0.5"></i>
+                                <div class="flex items-center gap-3 text-slate-700 font-medium">
+                                    <i class="fa-solid fa-layer-group text-[#4F46E5] w-5 shrink-0 text-center"></i>
                                     <span class="leading-snug">マーケティング経験8年</span>
                                 </div>
-                                <div class="flex items-start gap-3 text-slate-700 font-medium">
-                                    <i class="fa-solid fa-crown text-[#4F46E5] w-5 shrink-0 text-center mt-0.5"></i>
+                                <div class="flex items-center gap-3 text-slate-700 font-medium">
+                                    <i class="fa-solid fa-crown text-[#4F46E5] w-5 shrink-0 text-center"></i>
                                     <span class="leading-snug">事業会社元CMO （最高マーケティング責任者）</span>
                                 </div>
                             </div>
@@ -359,7 +360,7 @@
                         </div>
                     </div>
 
-                    <!-- Right Column: Biography -->
+                    <!-- Right Column: Biography & Qualifications/Education (名前の箱とは別エリア) -->
                     <div class="lg:col-span-7">
                         <div class="inline-block text-xs font-bold tracking-wider uppercase mb-2 gradient-text-subtle">ABOUT US / PROFILE</div>
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug mb-6">
@@ -380,6 +381,40 @@
                                 BtoBマーケティングの実務専門性と、事業会社CMOとしての実践経験の両方を活かし、企業の成長フェーズに合わせた最適な実行支援を行います。
                             </p>
                         </div>
+
+                        <!-- 資格・最終学歴（名前の箱の外に綺麗にレイアウト） -->
+                        <div class="mt-8 pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- 資格カード -->
+                            <div class="p-4 sm:p-5 rounded-xl bg-slate-50 border border-slate-200 shadow-sm">
+                                <div class="flex items-center gap-2 text-xs font-bold text-[#4F46E5] uppercase tracking-wider mb-2.5">
+                                    <i class="fa-solid fa-certificate text-sm"></i>
+                                    <span>資格</span>
+                                </div>
+                                <ul class="space-y-1.5 text-xs sm:text-sm font-semibold text-slate-800">
+                                    <li class="flex items-center gap-2">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-[#4F46E5] shrink-0"></span>
+                                        <span>Trailhead Ranger（Salesforce）</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-[#4F46E5] shrink-0"></span>
+                                        <span>GAIQ（Googleアナリティクス認定資格）</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- 最終学歴カード -->
+                            <div class="p-4 sm:p-5 rounded-xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-start">
+                                <div class="flex items-center gap-2 text-xs font-bold text-[#4F46E5] uppercase tracking-wider mb-2.5">
+                                    <i class="fa-solid fa-graduation-cap text-sm"></i>
+                                    <span>最終学歴</span>
+                                </div>
+                                <div class="text-xs sm:text-sm font-semibold text-slate-800 flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#4F46E5] shrink-0"></span>
+                                    <span>国立弘前大学</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
@@ -434,7 +469,7 @@
                                     <i class="fa-solid fa-lightbulb"></i> 取り組み (Approach)
                                 </div>
                                 <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                                    ウェビナーを単発イベントとして終わらせず、<strong class="text-slate-900 bg-indigo-50 px-1">「リード獲得 → ナーチャリング → 商談化」</strong>を一気通貫で完結させるマーケティング施策として再設計。
+                                    業界特化型の基礎セミナーを企画・実施。ISとの連携体制を見直し、リード獲得から商談化までのプロセスを再設計。
                                 </p>
                             </div>
                         </div>
@@ -458,27 +493,27 @@
                             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
                                 <div class="bg-white p-4 rounded-xl border border-slate-200 text-center shadow-sm">
                                     <div class="text-[11px] text-slate-500 font-medium">ターゲットリード</div>
-                                    <div class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">250<span class="text-xs font-normal">名</span></div>
+                                    <div class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">120<span class="text-xs font-normal">名</span></div>
                                 </div>
 
                                 <div class="bg-white p-4 rounded-xl border border-slate-200 text-center shadow-sm">
                                     <div class="text-[11px] text-slate-500 font-medium">商談創出</div>
-                                    <div class="text-xl sm:text-2xl font-extrabold text-[#2563EB] mt-1">20<span class="text-xs font-normal">社</span></div>
+                                    <div class="text-xl sm:text-2xl font-extrabold text-[#2563EB] mt-1">15<span class="text-xs font-normal">社</span></div>
                                 </div>
 
                                 <div class="bg-white p-4 rounded-xl border border-slate-200 text-center shadow-sm">
                                     <div class="text-[11px] text-slate-500 font-medium">商談化率</div>
-                                    <div class="text-xl sm:text-2xl font-extrabold text-[#4F46E5] mt-1">8<span class="text-xs font-normal">%</span></div>
+                                    <div class="text-xl sm:text-2xl font-extrabold text-[#4F46E5] mt-1">12<span class="text-xs font-normal">%</span></div>
                                 </div>
 
                                 <div class="bg-white p-4 rounded-xl border border-slate-200 text-center shadow-sm">
-                                    <div class="text-[11px] text-slate-500 font-medium">平均案件単価</div>
-                                    <div class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">300<span class="text-xs font-normal">万円</span></div>
+                                    <div class="text-[11px] text-slate-500 font-medium">平均受注単価</div>
+                                    <div class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">100<span class="text-xs font-normal">万円</span></div>
                                 </div>
 
                                 <div class="bg-gradient-to-br from-[#1D4ED8] to-[#4F46E5] p-4 rounded-xl text-white text-center shadow-md col-span-2 sm:col-span-1">
-                                    <div class="text-[11px] text-indigo-100 font-medium">月間パイプライン</div>
-                                    <div class="text-xl sm:text-2xl font-extrabold mt-1">6,000<span class="text-xs font-normal">万円/月</span></div>
+                                    <div class="text-[11px] text-indigo-100 font-medium">売上パイプライン（月）</div>
+                                    <div class="text-xl sm:text-2xl font-extrabold mt-1">6,000<span class="text-xs font-normal">万円</span></div>
                                 </div>
                             </div>
                         </div>
