@@ -1158,6 +1158,8 @@
 
                     <!-- Modern Contact Form Card -->
                     <div class="bg-white rounded-3xl p-6 sm:p-10 text-slate-800 shadow-2xl space-y-6 border border-slate-100">
+                        <div id="formNotice" class="hidden"></div>
+                        
                         <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 <div>
@@ -1199,9 +1201,9 @@
                                 <textarea id="formMessage" rows="5" required placeholder="リード獲得後の商談化率が上がらずに困っている、などの現状のお悩みやご要望をご記入ください。" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all resize-y"></textarea>
                             </div>
 
-                            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#4F46E5] text-white font-extrabold text-base shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/35 transition-all hover:scale-[1.01] flex items-center justify-center gap-2.5">
-                                <i class="fa-solid fa-paper-plane text-sm"></i>
-                                <span>送信する</span>
+                            <button type="submit" id="submitBtn" class="w-full py-4 rounded-xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#4F46E5] text-white font-extrabold text-base shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/35 transition-all hover:scale-[1.01] flex items-center justify-center gap-2.5">
+                                <i id="submitBtnIcon" class="fa-solid fa-paper-plane text-sm"></i>
+                                <span id="submitBtnText">送信する</span>
                             </button>
                         </form>
 
@@ -1356,25 +1358,67 @@
             copyToClipboardText('optia@outlook.jp', 'メールアドレス (optia@outlook.jp) をコピーしました');
         }
 
-        function handleFormSubmit(event) {
+        async function handleFormSubmit(event) {
             event.preventDefault();
+
+            const submitBtn = document.getElementById('submitBtn');
+            const submitBtnText = document.getElementById('submitBtnText');
+            const submitBtnIcon = document.getElementById('submitBtnIcon');
+            const formNotice = document.getElementById('formNotice');
+
             const name = document.getElementById('formName').value;
             const company = document.getElementById('formCompany').value;
             const email = document.getElementById('formEmail').value;
             const consultType = document.getElementById('formConsultType').value;
             const message = document.getElementById('formMessage').value;
 
-            const subject = encodeURIComponent(`【オプティア】無料相談・お問い合わせ (${company} ${name}様)`);
-            const body = encodeURIComponent(
-                `【お名前】\n${name}\n\n` +
-                `【貴社名】\n${company}\n\n` +
-                `【メールアドレス】\n${email}\n\n` +
-                `【初回30分オンライン無料相談】\n${consultType}\n\n` +
-                `【ご相談内容・現状のお悩み】\n${message}`
-            );
+            // UIを送信中状態に変更
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            submitBtnText.textContent = '送信中...';
+            submitBtnIcon.className = 'fa-solid fa-spinner fa-spin text-sm';
+            formNotice.classList.add('hidden');
 
-            window.location.href = `mailto:optia@outlook.jp?subject=${subject}&body=${body}`;
-            showToast('メールソフトを起動して送信します');
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/optia@outlook.jp', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        company: company,
+                        email: email,
+                        consultType: consultType,
+                        message: message,
+                        _subject: `【オプティア問い合わせ】${company} ${name}様`,
+                        _template: 'table',
+                        _captcha: 'false'
+                    })
+                });
+
+                if (response.ok) {
+                    formNotice.className = 'p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-bold flex items-center gap-2 mb-4';
+                    formNotice.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> お問い合わせを送信しました。内容を確認のうえ、3営業日以内にご連絡いたします。';
+                    formNotice.classList.remove('hidden');
+                    document.getElementById('contactForm').reset();
+                    showToast('お問い合わせを送信しました');
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Form Submit Error:', error);
+                formNotice.className = 'p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-sm font-bold flex items-center gap-2 mb-4';
+                formNotice.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-rose-500 text-base"></i> 送信に失敗しました。恐れ入りますが、optia@outlook.jp へ直接メールをお送りいただくか、時間をおいて再度お試しください。';
+                formNotice.classList.remove('hidden');
+                showToast('送信エラーが発生しました');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                submitBtnText.textContent = '送信する';
+                submitBtnIcon.className = 'fa-solid fa-paper-plane text-sm';
+            }
         }
 
         function showToast(message) {
