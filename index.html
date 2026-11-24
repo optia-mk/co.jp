@@ -80,12 +80,6 @@
         section[id] {
             scroll-margin-top: 6rem;
         }
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-[#4F46E5] selection:text-white flex flex-col min-h-screen text-[15px] sm:text-base overflow-x-hidden">
@@ -114,14 +108,14 @@
             </a>
 
             <!-- Desktop Nav Links -->
-            <nav class="hidden lg:flex items-center gap-1 xl:gap-2.5 text-sm font-bold text-slate-700">
+            <nav class="hidden lg:flex items-center gap-1.5 xl:gap-3 text-sm font-bold text-slate-700">
                 <a href="#sec-home" class="px-2.5 py-2 rounded-lg hover:text-[#4F46E5] hover:bg-indigo-50 transition-all">トップ</a>
                 <a href="#sec-issues" class="px-2.5 py-2 rounded-lg hover:text-[#4F46E5] hover:bg-indigo-50 transition-all">よくある課題</a>
                 <a href="#sec-services" class="px-2.5 py-2 rounded-lg hover:text-[#4F46E5] hover:bg-indigo-50 transition-all">サービス内容</a>
                 <a href="#sec-cases" class="px-2.5 py-2 rounded-lg hover:text-[#4F46E5] hover:bg-indigo-50 transition-all">実績・事例</a>
                 <a href="#sec-flow" class="px-2.5 py-2 rounded-lg hover:text-[#4F46E5] hover:bg-indigo-50 transition-all">支援の流れ</a>
-                <a href="#sec-faq" class="px-2.5 py-2 rounded-lg hover:text-[#4F46E5] hover:bg-indigo-50 transition-all">よくある質問</a>
                 <a href="#sec-why" class="px-2.5 py-2 rounded-lg hover:text-[#4F46E5] hover:bg-indigo-50 transition-all">代表プロフィール</a>
+                <a href="#sec-faq" class="px-2.5 py-2 rounded-lg hover:text-[#4F46E5] hover:bg-indigo-50 transition-all">FAQ</a>
             </nav>
 
             <div class="flex items-center gap-2 sm:gap-3">
@@ -143,34 +137,34 @@
             <a href="#sec-services" onclick="toggleMobileMenu()" class="block w-full text-left py-2.5 px-3 rounded-lg text-slate-800 hover:text-[#4F46E5] font-bold hover:bg-indigo-50">サービス内容</a>
             <a href="#sec-cases" onclick="toggleMobileMenu()" class="block w-full text-left py-2.5 px-3 rounded-lg text-slate-800 hover:text-[#4F46E5] font-bold hover:bg-indigo-50">実績・事例</a>
             <a href="#sec-flow" onclick="toggleMobileMenu()" class="block w-full text-left py-2.5 px-3 rounded-lg text-slate-800 hover:text-[#4F46E5] font-bold hover:bg-indigo-50">支援の流れ</a>
-            <a href="#sec-faq" onclick="toggleMobileMenu()" class="block w-full text-left py-2.5 px-3 rounded-lg text-slate-800 hover:text-[#4F46E5] font-bold hover:bg-indigo-50">よくある質問</a>
             <a href="#sec-why" onclick="toggleMobileMenu()" class="block w-full text-left py-2.5 px-3 rounded-lg text-slate-800 hover:text-[#4F46E5] font-bold hover:bg-indigo-50">代表プロフィール</a>
+            <a href="#sec-faq" onclick="toggleMobileMenu()" class="block w-full text-left py-2.5 px-3 rounded-lg text-slate-800 hover:text-[#4F46E5] font-bold hover:bg-indigo-50">FAQ</a>
             <a href="#sec-contact" onclick="toggleMobileMenu()" class="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-[#1D4ED8] to-[#4F46E5] text-white font-bold mt-2 text-base">無料相談をする</a>
         </div>
     </header>
 
     <!-- Main Single-Page Content Body -->
-    <main class="flex-grow pt-24 sm:pt-28 pb-16 space-y-10 sm:space-y-14">
+    <main class="flex-grow pt-20 sm:pt-24 pb-12 space-y-6 sm:space-y-12">
 
         <!-- 1. TOP PAGE (HERO) -->
         <section id="sec-home" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- First View (Hero) -->
-            <div class="rounded-3xl bg-white border border-indigo-100 px-6 py-9 sm:p-10 lg:p-12 shadow-sm relative overflow-hidden gradient-bg">
+            <div class="rounded-3xl bg-white border border-indigo-100 p-5 sm:p-10 lg:p-12 shadow-sm relative overflow-hidden gradient-bg">
                 <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[560px] h-[560px] bg-indigo-100/60 rounded-full blur-[120px] pointer-events-none"></div>
 
-                <div class="max-w-4xl mx-auto text-center relative z-10 py-2 sm:py-3">
-                    <div class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-200/80 text-indigo-700 text-xs sm:text-sm font-extrabold tracking-wide mb-5 sm:mb-6 shadow-xs">
+                <div class="max-w-4xl mx-auto text-center relative z-10 py-1 sm:py-3">
+                    <div class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-200/80 text-indigo-700 text-xs sm:text-sm font-extrabold tracking-wide mb-4 sm:mb-5 shadow-xs">
                         <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
                         <span>BtoBマーケティング戦略・実行支援</span>
                     </div>
 
-                    <h1 class="text-[24px] sm:text-5xl lg:text-[48px] font-black tracking-tight text-slate-900 leading-[1.4] sm:leading-[1.25] mb-6 sm:mb-7">
-                        <span class="block">顧客に選ばれる</span>
-                        <span class="gradient-text block mt-1 sm:mt-1.5">BtoBマーケティング戦略のパートナー</span>
+                    <h1 class="text-[24px] sm:text-5xl lg:text-[50px] font-black tracking-tight text-slate-900 leading-[1.35] sm:leading-[1.25] mb-4 sm:mb-6">
+                        <span class="inline-block">顧客に選ばれる</span><br>
+                        <span class="gradient-text inline-block">BtoBマーケティング戦略の<span class="inline-block">パートナー</span></span>
                     </h1>
 
-                    <div class="text-[15px] sm:text-base lg:text-[17px] text-slate-800 leading-[1.85] sm:leading-relaxed mb-8 sm:mb-9 max-w-2xl mx-auto space-y-4 sm:space-y-3 text-left sm:text-center">
+                    <div class="text-sm sm:text-base lg:text-[17px] text-slate-800 leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto space-y-3 text-left sm:text-center">
                         <p class="font-bold text-slate-900">
                             マーケティング施策を実行しているのに成果が出ない。<br class="hidden sm:inline">
                             自社の強みがうまく伝わらない。何から改善すべきかわからない。
@@ -181,7 +175,7 @@
                         </p>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-3.5">
                         <a href="#sec-contact" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#4F46E5] text-white font-bold text-base shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/35 transition-all hover:scale-105 flex items-center justify-center gap-2">
                             <span>無料相談はこちら</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
@@ -196,54 +190,54 @@
 
         <!-- 2. ISSUES (よくある課題) -->
         <section id="sec-issues" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="rounded-3xl bg-white border border-slate-200 px-6 py-9 sm:p-10 lg:p-12 shadow-sm space-y-8 sm:space-y-9">
-                <div class="text-center max-w-3xl mx-auto space-y-3">
+            <div class="rounded-3xl bg-white border border-slate-200 p-5 sm:p-10 lg:p-12 shadow-sm space-y-6 sm:space-y-8">
+                <div class="text-center max-w-3xl mx-auto space-y-2.5">
                     <span class="inline-block px-3 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-bold border border-amber-200">ISSUES & SOLUTIONS</span>
-                    <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 leading-[1.45] sm:leading-snug">
+                    <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
                         マーケティング施策は増えた。<br>
                         <span class="text-rose-600">でも、売上につながっていない。</span>
                     </h2>
-                    <p class="text-base font-bold text-slate-700 pt-1">こんな課題はありませんか？</p>
+                    <p class="text-base font-bold text-slate-700">こんな課題はありませんか？</p>
                 </div>
 
-                <!-- 課題リスト（6項目・2列均等レイアウト） -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4 max-w-4xl mx-auto">
-                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3.5">
+                <!-- スマホでも読みやすい大きめフォントの課題リスト（6項目・2列均等レイアウト） -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 max-w-4xl mx-auto">
+                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
                         <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <p class="text-[15px] sm:text-base text-slate-900 font-bold leading-relaxed">展示会や問い合わせで獲得したリードが、その後放置されている</p>
                     </div>
 
-                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3.5">
+                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
                         <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <p class="text-[15px] sm:text-base text-slate-900 font-bold leading-relaxed">ウェビナーを開催しているが、商談につながらない</p>
                     </div>
 
-                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3.5">
+                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
                         <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <p class="text-[15px] sm:text-base text-slate-900 font-bold leading-relaxed">営業任せの集客から脱却したい</p>
                     </div>
 
-                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3.5">
+                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
                         <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <p class="text-[15px] sm:text-base text-slate-900 font-bold leading-relaxed">何から改善すればいいかわからない</p>
                     </div>
 
-                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3.5">
+                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
                         <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <p class="text-[15px] sm:text-base text-slate-900 font-bold leading-relaxed">社内にマーケティング全体を設計できる人がいない</p>
                     </div>
 
-                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3.5">
+                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
                         <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                             <i class="fa-solid fa-check"></i>
                         </div>
@@ -251,32 +245,36 @@
                     </div>
                 </div>
 
-                <!-- Approach Connector & Highlight Box -->
-                <div class="max-w-4xl mx-auto pt-2">
+                <!-- Transition Arrow & Approach Highlight Box -->
+                <div class="max-w-4xl mx-auto pt-2 sm:pt-4">
                     <!-- Downward Arrow Connector -->
-                    <div class="flex flex-col items-center justify-center mb-5 sm:mb-6">
-                        <div class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-md shadow-indigo-500/25">
-                            <i class="fa-solid fa-arrow-down text-base"></i>
+                    <div class="flex flex-col items-center justify-center mb-4 sm:mb-5">
+                        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center shadow-xs">
+                            <i class="fa-solid fa-arrow-down text-sm sm:text-base"></i>
                         </div>
                     </div>
 
-                    <!-- Highlight Card -->
-                    <div class="rounded-3xl bg-gradient-to-br from-indigo-50/95 via-blue-50/60 to-white border-2 border-indigo-200/90 px-6 py-8 sm:p-10 text-center shadow-sm relative overflow-hidden">
-                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-600 text-white text-sm sm:text-base font-extrabold tracking-wider mb-5 shadow-xs">
-                            <i class="fa-solid fa-compass text-xs sm:text-sm"></i>
-                            <span>オプティアのアプローチ</span>
-                        </div>
+                    <!-- Elevated Approach Card -->
+                    <div class="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-indigo-50/90 via-blue-50/70 to-white border border-indigo-200/90 p-5 sm:p-8 lg:p-9 shadow-sm relative overflow-hidden">
+                        <div class="text-left sm:text-center space-y-3 sm:space-y-4 relative z-10">
+                            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-600 text-white text-xs font-extrabold tracking-wider shadow-xs">
+                                <i class="fa-solid fa-compass text-[11px]"></i>
+                                <span>APPROACH｜オプティアのアプローチ</span>
+                            </div>
 
+                            <h3 class="text-lg sm:text-2xl text-slate-900 font-black tracking-tight leading-snug pt-1">
                         <p class="text-lg sm:text-2xl text-slate-900 font-extrabold tracking-tight leading-[1.45] mb-5">
                             施策を増やすだけでは、<br class="sm:hidden">売上は伸びません。
                         </p>
 
-                        <div class="text-[15px] sm:text-lg text-slate-700 font-medium leading-[1.85] max-w-2xl mx-auto space-y-4 text-left sm:text-center">
+                        <div class="text-[15px] sm:text-lg text-slate-700 font-medium leading-[1.9] max-w-2xl mx-auto space-y-4 sm:space-y-3 text-left sm:text-center">
                             <p>
-                                「誰に・何を・どう届けるか」の設計が曖昧なままでは、個々の施策は成果につながりません。
+                                「誰に・何を・どう届けるか」の設計が曖昧なままでは、<br class="hidden sm:inline">
+                                個々の施策は成果につながりません。
                             </p>
                             <p>
-                                オプティアは顧客・市場・競合を整理し、<span class="text-indigo-700 font-bold">戦略設計から施策の優先順位、実行・改善まで一貫して伴走します。</span>
+                                オプティアは顧客・市場・競合を整理し、<br class="hidden sm:inline">
+                                <span class="text-indigo-700 font-bold">戦略設計から施策の優先順位、実行・改善まで一貫して伴走します。</span>
                             </p>
                         </div>
                     </div>
@@ -286,114 +284,112 @@
 
         <!-- 3. SOLUTIONS & SERVICES (サービス内容 - 横並び3カラム・行揃え対応) -->
         <section id="sec-services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="rounded-3xl bg-white border border-slate-200 px-6 py-9 sm:p-10 lg:p-12 shadow-sm">
-                <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-9">
-                    <span class="text-xs font-bold tracking-wider uppercase block mb-2 gradient-text-subtle">SOLUTIONS</span>
+            <div class="rounded-3xl bg-white border border-slate-200 p-5 sm:p-10 lg:p-12 shadow-sm">
+                <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+                    <span class="text-xs font-bold tracking-wider uppercase block mb-1.5 gradient-text-subtle">SOLUTIONS</span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">サービス内容</h2>
-                    <p class="text-slate-600 text-[15px] sm:text-base mt-3 font-medium leading-[1.75]">
-                        オプティアは、BtoB事業のボトルネックに応じて、3つの領域から支援します。
-                    </p>
+                    <p class="text-slate-600 text-sm sm:text-base mt-2 font-medium">オプティアは、BtoB事業のボトルネックに応じて、3つの領域から支援します。</p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 items-stretch">
                     
                     <!-- ① SERVICE 01 -->
-                    <div class="p-6 rounded-3xl bg-slate-50/90 border border-indigo-100 shadow-sm flex flex-col">
+                    <div class="p-5 sm:p-6 rounded-3xl bg-slate-50/90 border border-indigo-100 shadow-sm flex flex-col">
                         <!-- Header & Description -->
-                        <div class="lg:min-h-[195px] pb-5 mb-5 border-b border-slate-200/80 flex flex-col">
-                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                        <div class="lg:min-h-[195px] pb-4 mb-4 border-b border-slate-200/80 flex flex-col">
+                            <div class="flex flex-wrap items-center gap-2 mb-2.5">
                                 <span class="px-2.5 py-0.5 rounded-lg bg-indigo-600 text-white text-xs font-extrabold tracking-wider">01</span>
                                 <span class="text-xs sm:text-sm font-bold text-indigo-700">マーケティングを整理したい</span>
                             </div>
-                            <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 mb-3">
+                            <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 mb-2.5">
                                 マーケティング戦略支援
                             </h3>
-                            <p class="text-sm text-slate-700 leading-[1.75] font-medium">
+                            <p class="text-sm text-slate-700 leading-relaxed font-medium">
                                 顧客・市場・競合・自社を分析し、誰に、何を、どのような価値として届けるのかを整理します。マーケティング全体の方向性を明確にし、施策の優先順位まで設計します。
                             </p>
                         </div>
 
                         <!-- Support List Box -->
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 flex-grow">
-                            <h4 class="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-3">主な支援内容</h4>
-                            <ul class="space-y-2 text-sm text-slate-800 font-medium">
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>3C分析・SWOT分析</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>STP分析</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>ターゲット・ICP整理</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>バリュープロポジション設計</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>ブランドコンセプト・メッセージ設計</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>カスタマージャーニー設計</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>マーケティングファネル設計</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>KPI・KGI設計</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>営業・マーケティング連携設計</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>マーケティング戦略・ロードマップ策定</span></li>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200/80 flex-grow">
+                            <h4 class="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-2.5">主な支援内容</h4>
+                            <ul class="space-y-1.5 text-sm text-slate-800 font-medium">
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>3C分析・SWOT分析</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>STP分析</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>ターゲット・ICP整理</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>バリュープロポジション設計</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>ブランドコンセプト・メッセージ設計</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>カスタマージャーニー設計</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>マーケティングファネル設計</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>KPI・KGI設計</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>営業・マーケティング連携設計</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>マーケティング戦略・ロードマップ策定</span></li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- ② SERVICE 02 -->
-                    <div class="p-6 rounded-3xl bg-slate-50/90 border border-indigo-100 shadow-sm flex flex-col">
+                    <div class="p-5 sm:p-6 rounded-3xl bg-slate-50/90 border border-indigo-100 shadow-sm flex flex-col">
                         <!-- Header & Description -->
-                        <div class="lg:min-h-[195px] pb-5 mb-5 border-b border-slate-200/80 flex flex-col">
-                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                        <div class="lg:min-h-[195px] pb-4 mb-4 border-b border-slate-200/80 flex flex-col">
+                            <div class="flex flex-wrap items-center gap-2 mb-2.5">
                                 <span class="px-2.5 py-0.5 rounded-lg bg-indigo-600 text-white text-xs font-extrabold tracking-wider">02</span>
                                 <span class="text-xs sm:text-sm font-bold text-indigo-700">商談を増やしたい</span>
                             </div>
-                            <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 mb-3">
+                            <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 mb-2.5">
                                 リード獲得・商談化支援
                             </h3>
-                            <p class="text-sm text-slate-700 leading-[1.75] font-medium">
+                            <p class="text-sm text-slate-700 leading-relaxed font-medium">
                                 「リードはあるのに商談が増えない」という課題に対し、獲得したリードを商談につなげる仕組みを設計・実行します。
                             </p>
                         </div>
 
                         <!-- Support List Box -->
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 flex-grow">
-                            <h4 class="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-3">主な支援内容</h4>
-                            <ul class="space-y-2 text-sm text-slate-800 font-medium">
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>ウェビナー企画・運営</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>Web広告設計・運用</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>リードナーチャリング</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>メールマーケティング</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>コンテンツ企画・制作</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>休眠リードの掘り起こし</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>展示会・イベント後のフォロー設計</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>インサイドセールスとの連携</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>商談化率改善</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>リード獲得〜商談化プロセスの改善</span></li>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200/80 flex-grow">
+                            <h4 class="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-2.5">主な支援内容</h4>
+                            <ul class="space-y-1.5 text-sm text-slate-800 font-medium">
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>ウェビナー企画・運営</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>Web広告設計・運用</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>リードナーチャリング</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>メールマーケティング</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>コンテンツ企画・制作</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>休眠リードの掘り起こし</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>展示会・イベント後のフォロー設計</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>インサイドセールスとの連携</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>商談化率改善</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>リード獲得〜商談化プロセスの改善</span></li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- ③ SERVICE 03 -->
-                    <div class="p-6 rounded-3xl bg-slate-50/90 border border-indigo-100 shadow-sm flex flex-col">
+                    <div class="p-5 sm:p-6 rounded-3xl bg-slate-50/90 border border-indigo-100 shadow-sm flex flex-col">
                         <!-- Header & Description -->
-                        <div class="lg:min-h-[195px] pb-5 mb-5 border-b border-slate-200/80 flex flex-col">
-                            <div class="flex flex-wrap items-center gap-2 mb-3">
+                        <div class="lg:min-h-[195px] pb-4 mb-4 border-b border-slate-200/80 flex flex-col">
+                            <div class="flex flex-wrap items-center gap-2 mb-2.5">
                                 <span class="px-2.5 py-0.5 rounded-lg bg-indigo-600 text-white text-xs font-extrabold tracking-wider">03</span>
                                 <span class="text-xs sm:text-sm font-bold text-indigo-700">解約を減らし、顧客価値を高めたい</span>
                             </div>
-                            <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 mb-3">
+                            <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 mb-2.5">
                                 顧客マーケティング・カスタマーマーケティング支援
                             </h3>
-                            <p class="text-sm text-slate-700 leading-[1.75] font-medium">
+                            <p class="text-sm text-slate-700 leading-relaxed font-medium">
                                 契約後の顧客接点を設計し、サービスの活用促進、継続、アップセル・クロスセルにつなげます。
                             </p>
                         </div>
 
                         <!-- Support List Box -->
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 flex-grow">
-                            <h4 class="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-3">主な支援内容</h4>
-                            <ul class="space-y-2 text-sm text-slate-800 font-medium">
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>カスタマーマーケティング</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>オンボーディング支援</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>活用促進</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>顧客向けオウンドメディアの企画・運営</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>顧客向けコンテンツ</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>顧客コミュニケーション設計</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>メールマーケティング</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>解約抑制</span></li>
-                                <li class="flex items-start gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>アップセル・クロスセル</span></li>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200/80 flex-grow">
+                            <h4 class="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-2.5">主な支援内容</h4>
+                            <ul class="space-y-1.5 text-sm text-slate-800 font-medium">
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>カスタマーマーケティング</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>オンボーディング支援</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>活用促進</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>顧客向けオウンドメディアの企画・運営</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>顧客向けコンテンツ</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>顧客コミュニケーション設計</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>メールマーケティング</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>解約抑制</span></li>
+                                <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0 mt-2"></span><span>アップセル・クロスセル</span></li>
                             </ul>
                         </div>
                     </div>
@@ -402,25 +398,25 @@
             </div>
         </section>
 
-        <!-- 4. CASE STUDIES (実績・事例) -->
+        <!-- 4. CASE STUDIES (実績・事例 - RESULTS余白削減 & CASE 03追加) -->
         <section id="sec-cases" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="rounded-3xl bg-white border border-slate-200 px-6 py-9 sm:p-10 lg:p-12 shadow-sm space-y-8 sm:space-y-9">
+            <div class="rounded-3xl bg-white border border-slate-200 p-5 sm:p-10 lg:p-12 shadow-sm space-y-6 sm:space-y-8">
                 
                 <div class="text-center max-w-3xl mx-auto">
-                    <span class="text-xs font-bold tracking-wider uppercase block mb-2 gradient-text-subtle">CASE STUDIES</span>
+                    <span class="text-xs font-bold tracking-wider uppercase block mb-1.5 gradient-text-subtle">CASE STUDIES</span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">支援実績・成果事例</h2>
-                    <p class="text-slate-600 text-[15px] sm:text-base mt-3 font-medium leading-[1.75]">
+                    <p class="text-slate-600 text-base mt-2.5 font-medium leading-relaxed">
                         BtoBマーケティングの代表的な事例をご紹介します。
                     </p>
                 </div>
 
-                <div class="space-y-7 sm:space-y-8">
+                <div class="space-y-6 sm:space-y-8">
                     
                     <!-- CASE 01 -->
                     <div class="rounded-3xl border border-indigo-100 bg-slate-50/90 p-5 sm:p-8 shadow-sm relative overflow-hidden">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3 mb-6 pb-4 border-b border-slate-200/80">
-                            <span class="self-start sm:self-auto px-3.5 py-1 rounded-lg bg-indigo-600 text-white text-xs font-extrabold tracking-wider shrink-0">CASE 01</span>
-                            <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900 leading-[1.45] sm:leading-snug">休眠リードを活用し、月間6,000万円のパイプラインを創出</h3>
+                        <div class="flex flex-wrap items-center gap-3 mb-5 pb-4 border-b border-slate-200/80">
+                            <span class="px-3.5 py-1 rounded-lg bg-indigo-600 text-white text-xs font-extrabold tracking-wider">CASE 01</span>
+                            <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900">休眠リードを活用し、月間6,000万円のパイプラインを創出</h3>
                         </div>
 
                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
@@ -431,7 +427,7 @@
                                         <i class="fa-solid fa-triangle-exclamation"></i>
                                         <span>課題</span>
                                     </span>
-                                    <ul class="text-sm sm:text-[15px] text-slate-700 leading-[1.75] font-medium space-y-1.5 list-disc list-inside">
+                                    <ul class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-medium space-y-1 list-disc list-inside">
                                         <li>過去に獲得した休眠リードが十分に活用されていない</li>
                                         <li>マーケティング施策から商談への転換効率が低い</li>
                                         <li>リード獲得後の営業・マーケティング連携が十分ではない</li>
@@ -443,8 +439,8 @@
                                         <i class="fa-solid fa-gears"></i>
                                         <span>取り組み</span>
                                     </span>
-                                    <p class="text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium">
-                                        休眠リードの中からターゲットとなる企業を整理し、業界特化型の基礎セミナーを企画・実施。<br class="hidden sm:inline">
+                                    <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-medium">
+                                        休眠リードの中からターゲットとなる企業を整理し、業界特化型の基礎セミナーを企画・実施。<br>
                                         ターゲット選定からテーマ設計、集客、当日の運営、リードフォロー、インサイドセールスとの連携まで、商談化までのプロセスを再設計しました。
                                     </p>
                                 </div>
@@ -457,7 +453,7 @@
                                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700 font-medium">
                                         <div>
                                             <div class="font-bold text-slate-900 mb-1.5">ウェビナー企画・運営</div>
-                                            <ul class="text-slate-600 text-xs sm:text-sm space-y-1.5 list-disc list-inside">
+                                            <ul class="text-slate-600 text-xs sm:text-sm space-y-1 list-disc list-inside">
                                                 <li>ターゲット設計・テーマ企画</li>
                                                 <li>集客設計・当日運営</li>
                                                 <li>リードフォロー・インサイドセールス連携</li>
@@ -465,7 +461,7 @@
                                         </div>
                                         <div>
                                             <div class="font-bold text-slate-900 mb-1.5">メールマーケティング・コンテンツ</div>
-                                            <ul class="text-slate-600 text-xs sm:text-sm space-y-1.5 list-disc list-inside">
+                                            <ul class="text-slate-600 text-xs sm:text-sm space-y-1 list-disc list-inside">
                                                 <li>休眠リードへの再アプローチ設計</li>
                                                 <li>ターゲットに合わせたメール作成</li>
                                                 <li>コンテンツ企画・制作</li>
@@ -475,41 +471,41 @@
                                 </div>
                             </div>
 
-                            <!-- Quantitative Results -->
+                            <!-- Quantitative Results (無駄な余白をなくしたコンパクト設計) -->
                             <div class="lg:col-span-5 bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-2xl p-5 sm:p-6 shadow-md space-y-4">
-                                <div class="text-xs font-bold text-indigo-300 uppercase tracking-wider border-b border-indigo-800/80 pb-2.5 flex items-center justify-between">
+                                <div class="text-xs font-bold text-indigo-300 uppercase tracking-wider border-b border-indigo-800/80 pb-2 flex items-center justify-between">
                                     <span>RESULTS</span>
                                     <i class="fa-solid fa-chart-line text-emerald-400"></i>
                                 </div>
 
-                                <div class="grid grid-cols-2 gap-3">
-                                    <div class="bg-white/10 p-3.5 rounded-xl text-center">
+                                <div class="grid grid-cols-2 gap-2.5">
+                                    <div class="bg-white/10 p-3 rounded-xl text-center">
                                         <div class="text-xs text-indigo-200 font-medium">ターゲットリード</div>
-                                        <div class="flex items-baseline justify-center gap-1 mt-1.5">
+                                        <div class="flex items-baseline justify-center gap-1 mt-1">
                                             <span class="text-2xl sm:text-3xl font-black text-white leading-none">480</span>
                                             <span class="text-xs font-bold text-indigo-300">名</span>
                                         </div>
                                     </div>
 
-                                    <div class="bg-white/10 p-3.5 rounded-xl text-center">
+                                    <div class="bg-white/10 p-3 rounded-xl text-center">
                                         <div class="text-xs text-indigo-200 font-medium">商談創出</div>
-                                        <div class="flex items-baseline justify-center gap-1 mt-1.5">
+                                        <div class="flex items-baseline justify-center gap-1 mt-1">
                                             <span class="text-2xl sm:text-3xl font-black text-emerald-400 leading-none">60</span>
                                             <span class="text-xs font-bold text-emerald-300">社</span>
                                         </div>
                                     </div>
 
-                                    <div class="bg-white/10 p-3.5 rounded-xl text-center">
+                                    <div class="bg-white/10 p-3 rounded-xl text-center">
                                         <div class="text-xs text-indigo-200 font-medium">商談化率</div>
-                                        <div class="flex items-baseline justify-center gap-1 mt-1.5">
+                                        <div class="flex items-baseline justify-center gap-1 mt-1">
                                             <span class="text-2xl sm:text-3xl font-black text-white leading-none">12</span>
                                             <span class="text-xs font-bold text-indigo-300">%</span>
                                         </div>
                                     </div>
 
-                                    <div class="bg-white/10 p-3.5 rounded-xl text-center">
+                                    <div class="bg-white/10 p-3 rounded-xl text-center">
                                         <div class="text-xs text-indigo-200 font-medium">平均受注単価</div>
-                                        <div class="flex items-baseline justify-center gap-1 mt-1.5">
+                                        <div class="flex items-baseline justify-center gap-1 mt-1">
                                             <span class="text-2xl sm:text-3xl font-black text-white leading-none">100</span>
                                             <span class="text-xs font-bold text-indigo-300">万円</span>
                                         </div>
@@ -517,7 +513,7 @@
                                 </div>
 
                                 <div class="bg-indigo-950/70 border border-indigo-800/80 p-4 rounded-xl text-center">
-                                    <div class="text-xs font-bold text-indigo-300 mb-1">月間パイプライン</div>
+                                    <div class="text-xs font-bold text-indigo-300 mb-0.5">月間パイプライン</div>
                                     <div class="text-2xl sm:text-3xl font-extrabold text-amber-300 tracking-tight">6,000<span class="text-base font-bold text-white ml-1">万円</span></div>
                                 </div>
                             </div>
@@ -526,9 +522,9 @@
 
                     <!-- CASE 02 -->
                     <div class="rounded-3xl border border-indigo-100 bg-slate-50/90 p-5 sm:p-8 shadow-sm relative overflow-hidden">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3 mb-6 pb-4 border-b border-slate-200/80">
-                            <span class="self-start sm:self-auto px-3.5 py-1 rounded-lg bg-indigo-600 text-white text-xs font-extrabold tracking-wider shrink-0">CASE 02</span>
-                            <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900 leading-[1.45] sm:leading-snug">顧客マーケティングによって、チャーン率を8%から5%へ改善</h3>
+                        <div class="flex flex-wrap items-center gap-3 mb-5 pb-4 border-b border-slate-200/80">
+                            <span class="px-3.5 py-1 rounded-lg bg-indigo-600 text-white text-xs font-extrabold tracking-wider">CASE 02</span>
+                            <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900">顧客マーケティングによって、チャーン率を8%から5%へ改善</h3>
                         </div>
 
                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
@@ -539,7 +535,7 @@
                                         <i class="fa-solid fa-triangle-exclamation"></i>
                                         <span>課題</span>
                                     </span>
-                                    <p class="text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium">
+                                    <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-medium">
                                         約6,000社規模のSaaSにおいて、契約後のユーザーコミュニケーションや活用支援が十分ではなく、チャーン率が高い状態にありました。
                                     </p>
                                 </div>
@@ -549,8 +545,8 @@
                                         <i class="fa-solid fa-gears"></i>
                                         <span>取り組み</span>
                                     </span>
-                                    <p class="text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium">
-                                        顧客がプロダクトを十分に活用できていないことを解約要因の一つと捉え、オンボーディングや活用ノウハウの提供方法を見直しました。<br class="hidden sm:inline">
+                                    <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-medium">
+                                        顧客がプロダクトを十分に活用できていないことを解約要因の一つと捉え、オンボーディングや活用ノウハウの提供方法を見直しました。<br>
                                         顧客との継続的な接点をマーケティングで設計し、利用促進につながるコンテンツやメールコミュニケーションを体系化しました。
                                     </p>
                                 </div>
@@ -563,7 +559,7 @@
                                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700 font-medium">
                                         <div>
                                             <div class="font-bold text-slate-900 mb-1.5">ユーザー向けオウンドメディア</div>
-                                            <ul class="text-slate-600 text-xs sm:text-sm space-y-1.5 list-disc list-inside">
+                                            <ul class="text-slate-600 text-xs sm:text-sm space-y-1 list-disc list-inside">
                                                 <li>活用ノウハウコンテンツの拡充</li>
                                                 <li>プロダクトアップデート情報の体系化</li>
                                                 <li>顧客向け情報提供の仕組み化</li>
@@ -571,7 +567,7 @@
                                         </div>
                                         <div>
                                             <div class="font-bold text-slate-900 mb-1.5">メールマーケティング</div>
-                                            <ul class="text-slate-600 text-xs sm:text-sm space-y-1.5 list-disc list-inside">
+                                            <ul class="text-slate-600 text-xs sm:text-sm space-y-1 list-disc list-inside">
                                                 <li>オンボーディング用ステップメール</li>
                                                 <li>新規コンテンツ配信・活用促進</li>
                                                 <li>顧客コミュニケーションの改善</li>
@@ -581,15 +577,15 @@
                                 </div>
                             </div>
 
-                            <!-- Quantitative Results -->
+                            <!-- Quantitative Results (無駄な余白をなくしたコンパクト設計) -->
                             <div class="lg:col-span-5 bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-2xl p-5 sm:p-6 shadow-md space-y-4">
-                                <div class="text-xs font-bold text-indigo-300 uppercase tracking-wider border-b border-indigo-800/80 pb-2.5 flex items-center justify-between">
+                                <div class="text-xs font-bold text-indigo-300 uppercase tracking-wider border-b border-indigo-800/80 pb-2 flex items-center justify-between">
                                     <span>RESULTS</span>
                                     <i class="fa-solid fa-shield-halved text-emerald-400"></i>
                                 </div>
 
-                                <div class="space-y-3">
-                                    <div class="bg-white/10 p-4 rounded-xl">
+                                <div class="space-y-2.5">
+                                    <div class="bg-white/10 p-3.5 rounded-xl">
                                         <div class="text-xs text-indigo-200 font-medium mb-1">チャーン率</div>
                                         <div class="flex items-center justify-between">
                                             <div class="flex items-baseline gap-2">
@@ -603,7 +599,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="bg-white/10 p-4 rounded-xl">
+                                    <div class="bg-white/10 p-3.5 rounded-xl">
                                         <div class="text-xs text-indigo-200 font-medium mb-1">年間解約数</div>
                                         <div class="flex items-center justify-between">
                                             <div class="flex items-baseline gap-2">
@@ -619,18 +615,18 @@
                                 </div>
 
                                 <div class="bg-indigo-950/70 border border-indigo-800/80 p-4 rounded-xl text-center">
-                                    <div class="text-xs font-bold text-indigo-300 mb-1">年間契約額インパクト</div>
+                                    <div class="text-xs font-bold text-indigo-300 mb-0.5">年間契約額インパクト</div>
                                     <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 tracking-tight">約 1,800<span class="text-base font-bold text-white ml-1">万円／年</span></div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- CASE 03 -->
+                    <!-- CASE 03 (新規追加事例 - CASE 01・02と統一デザイン) -->
                     <div class="rounded-3xl border border-indigo-100 bg-slate-50/90 p-5 sm:p-8 shadow-sm relative overflow-hidden">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3 mb-6 pb-4 border-b border-slate-200/80">
-                            <span class="self-start sm:self-auto px-3.5 py-1 rounded-lg bg-indigo-600 text-white text-xs font-extrabold tracking-wider shrink-0">CASE 03</span>
-                            <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900 leading-[1.45] sm:leading-snug">Web広告の新規設計・運用により、目標売上160%を達成</h3>
+                        <div class="flex flex-wrap items-center gap-3 mb-5 pb-4 border-b border-slate-200/80">
+                            <span class="px-3.5 py-1 rounded-lg bg-indigo-600 text-white text-xs font-extrabold tracking-wider">CASE 03</span>
+                            <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900">Web広告の新規設計・運用により、目標売上160%を達成</h3>
                         </div>
 
                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
@@ -641,7 +637,7 @@
                                         <i class="fa-solid fa-triangle-exclamation"></i>
                                         <span>課題</span>
                                     </span>
-                                    <p class="text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium">
+                                    <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-medium">
                                         広告運用の設計・体制が十分に整っておらず、効果的な集客の仕組みづくりが必要でした。
                                     </p>
                                 </div>
@@ -651,7 +647,7 @@
                                         <i class="fa-solid fa-lightbulb"></i>
                                         <span>発見</span>
                                     </span>
-                                    <p class="text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium">
+                                    <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-medium">
                                         商材・ターゲット・検索ニーズを踏まえ、広告媒体やキーワード、訴求内容を整理・検討しました。
                                     </p>
                                 </div>
@@ -661,7 +657,7 @@
                                         <i class="fa-solid fa-list-check"></i>
                                         <span>実行施策</span>
                                     </span>
-                                    <p class="text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium">
+                                    <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-medium">
                                         Google・Yahoo広告の新規設計、配信開始、流入・CV・CPAなどを基にした継続改善を実施しました。
                                     </p>
                                 </div>
@@ -669,23 +665,23 @@
 
                             <!-- Quantitative Results -->
                             <div class="lg:col-span-5 bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-2xl p-5 sm:p-6 shadow-md space-y-4">
-                                <div class="text-xs font-bold text-indigo-300 uppercase tracking-wider border-b border-indigo-800/80 pb-2.5 flex items-center justify-between">
+                                <div class="text-xs font-bold text-indigo-300 uppercase tracking-wider border-b border-indigo-800/80 pb-2 flex items-center justify-between">
                                     <span>RESULTS</span>
                                     <i class="fa-solid fa-trophy text-amber-400"></i>
                                 </div>
 
-                                <div class="bg-white/10 p-4 rounded-xl text-center">
+                                <div class="bg-white/10 p-3.5 rounded-xl text-center">
                                     <div class="text-xs text-indigo-200 font-medium">運用広告予算規模</div>
-                                    <div class="flex items-baseline justify-center gap-1 mt-1.5">
+                                    <div class="flex items-baseline justify-center gap-1 mt-1">
                                         <span class="text-2xl sm:text-3xl font-black text-white leading-none">1,000</span>
                                         <span class="text-xs font-bold text-indigo-300">万円規模</span>
                                     </div>
                                 </div>
 
                                 <div class="bg-indigo-950/70 border border-indigo-800/80 p-4 rounded-xl text-center">
-                                    <div class="text-xs font-bold text-indigo-300 mb-1">売上達成率</div>
+                                    <div class="text-xs font-bold text-indigo-300 mb-0.5">売上達成率</div>
                                     <div class="text-2xl sm:text-3xl font-extrabold text-amber-300 tracking-tight">目標売上 160<span class="text-base font-bold text-white ml-0.5">%</span></div>
-                                    <p class="text-xs text-slate-300 mt-2 font-medium leading-relaxed">1,000万円規模の広告予算を運用し、目標売上160%を達成</p>
+                                    <p class="text-xs text-slate-300 mt-1.5 font-medium">1,000万円規模の広告予算を運用し、目標売上160%を達成</p>
                                 </div>
                             </div>
                         </div>
@@ -697,57 +693,55 @@
 
         <!-- 5. PROCESS (支援の流れ) -->
         <section id="sec-flow" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="rounded-3xl bg-white border border-slate-200 px-6 py-9 sm:p-12 shadow-sm">
+            <div class="rounded-3xl bg-white border border-slate-200 p-6 sm:p-12 shadow-sm">
                 <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-                    <span class="text-xs font-bold tracking-wider uppercase block mb-2 gradient-text-subtle">PROCESS</span>
+                    <span class="text-xs font-bold tracking-wider uppercase block mb-1.5 gradient-text-subtle">PROCESS</span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">支援の進め方</h2>
-                    <p class="text-slate-600 text-[15px] sm:text-base mt-3 font-medium leading-[1.75]">
-                        ご相談から施策実行、成果確認まで、現状に合わせて進めます。
-                    </p>
+                    <p class="text-slate-600 text-base mt-2.5 font-medium">ご相談から施策実行、成果確認まで、現状に合わせて進めます。</p>
                 </div>
 
-                <div class="max-w-4xl mx-auto space-y-4 sm:space-y-5">
+                <div class="max-w-4xl mx-auto space-y-4">
                     
-                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start gap-3.5 sm:gap-5">
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start gap-3 sm:gap-5">
                         <span class="px-3.5 py-1 rounded-xl bg-indigo-600 text-white font-extrabold text-xs shrink-0">STEP 01</span>
                         <div>
-                            <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-1.5">現状ヒアリング</h3>
-                            <p class="text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium">事業内容、ターゲット、営業体制、現在のマーケティング施策、組織体制などを確認します。</p>
+                            <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-1">現状ヒアリング</h3>
+                            <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-medium">事業内容、ターゲット、営業体制、現在のマーケティング施策、組織体制などを確認します。</p>
                         </div>
                     </div>
 
-                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start gap-3.5 sm:gap-5">
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start gap-3 sm:gap-5">
                         <span class="px-3.5 py-1 rounded-xl bg-indigo-600 text-white font-extrabold text-xs shrink-0">STEP 02</span>
                         <div>
-                            <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-1.5">課題分析</h3>
-                            <p class="text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium">顧客・市場・競合・自社、そしてマーケティングファネル全体を確認し、売上や事業成長を阻害しているボトルネックを特定します。</p>
+                            <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-1">課題分析</h3>
+                            <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-medium">顧客・市場・競合・自社、そしてマーケティングファネル全体を確認し、売上や事業成長を阻害しているボトルネックを特定します。</p>
                         </div>
                     </div>
 
-                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start gap-3.5 sm:gap-5">
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start gap-3 sm:gap-5">
                         <span class="px-3.5 py-1 rounded-xl bg-indigo-600 text-white font-extrabold text-xs shrink-0">STEP 03</span>
                         <div>
-                            <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-1.5">戦略・優先順位の設計</h3>
-                            <p class="text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium">
+                            <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-1">戦略・優先順位の設計</h3>
+                            <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-medium">
                                 「何をやるべきか」だけでなく、「何を今はやらないか」まで整理します。<br class="hidden sm:inline">
                                 ターゲット、提供価値、KPI、施策、営業連携などを整理し、実行可能なマーケティング計画に落とし込みます。
                             </p>
                         </div>
                     </div>
 
-                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start gap-3.5 sm:gap-5">
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start gap-3 sm:gap-5">
                         <span class="px-3.5 py-1 rounded-xl bg-indigo-600 text-white font-extrabold text-xs shrink-0">STEP 04</span>
                         <div>
-                            <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-1.5">施策実行</h3>
-                            <p class="text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium">必要に応じて、ウェビナー、メールマーケティング、コンテンツ、リードナーチャリング、顧客マーケティング、営業連携などを実行します。</p>
+                            <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-1">施策実行</h3>
+                            <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-medium">必要に応じて、ウェビナー、メールマーケティング、コンテンツ、リードナーチャリング、顧客マーケティング、営業連携などを実行します。</p>
                         </div>
                     </div>
 
-                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start gap-3.5 sm:gap-5">
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start gap-3 sm:gap-5">
                         <span class="px-3.5 py-1 rounded-xl bg-indigo-600 text-white font-extrabold text-xs shrink-0">STEP 05</span>
                         <div>
-                            <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-1.5">分析・改善</h3>
-                            <p class="text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium">施策単体のKPIだけではなく、商談、受注、継続などの事業成果を確認しながら改善を行います。</p>
+                            <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-1">分析・改善</h3>
+                            <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-medium">施策単体のKPIだけではなく、商談、受注、継続などの事業成果を確認しながら改善を行います。</p>
                         </div>
                     </div>
 
@@ -755,210 +749,15 @@
             </div>
         </section>
 
-        <!-- 6. FAQ (よくある質問 - 代表プロフィールの前に配置) -->
-        <section id="sec-faq" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="rounded-3xl bg-white border border-slate-200 px-6 py-9 sm:p-10 lg:p-12 shadow-sm">
-                <div class="max-w-4xl mx-auto">
-                    
-                    <div class="text-center mb-8 sm:mb-10">
-                        <span class="text-xs font-bold tracking-widest uppercase block mb-2 gradient-text-subtle">FAQ</span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">よくある質問</h2>
-                        <p class="text-slate-600 text-[15px] sm:text-base mt-3 font-medium leading-[1.75]">
-                            支援内容や進め方について、よくいただくご質問にお答えします。
-                        </p>
-                    </div>
-
-                    <div class="space-y-3.5 sm:space-y-4">
-                        <!-- Q1 -->
-                        <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all" open>
-                            <summary class="flex items-start sm:items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none">
-                                <div class="flex items-start sm:items-center gap-3.5">
-                                    <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">Q</span>
-                                    <h3 class="text-[15px] sm:text-base font-extrabold text-slate-900 leading-snug">どのような企業が対象ですか？</h3>
-                                </div>
-                                <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 flex items-center justify-center shrink-0 group-open:rotate-180 group-open:bg-indigo-50 group-open:text-indigo-600 group-open:border-indigo-200 transition-transform mt-0.5 sm:mt-0">
-                                    <i class="fa-solid fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 pl-5 sm:pl-[62px] text-sm sm:text-[15px] text-slate-700 leading-[1.85] font-medium border-t border-slate-100">
-                                BtoB企業を中心に、マーケティングを強化したい企業を対象としています。特に、SaaS・AI・ITサービスなど、マーケティングによる顧客獲得や事業成長を目指す企業との相性が良いです。
-                            </div>
-                        </details>
-
-                        <!-- Q2 -->
-                        <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all" open>
-                            <summary class="flex items-start sm:items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none">
-                                <div class="flex items-start sm:items-center gap-3.5">
-                                    <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">Q</span>
-                                    <h3 class="text-[15px] sm:text-base font-extrabold text-slate-900 leading-snug">どのような課題を相談できますか？</h3>
-                                </div>
-                                <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 flex items-center justify-center shrink-0 group-open:rotate-180 group-open:bg-indigo-50 group-open:text-indigo-600 group-open:border-indigo-200 transition-transform mt-0.5 sm:mt-0">
-                                    <i class="fa-solid fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 pl-5 sm:pl-[62px] text-sm sm:text-[15px] text-slate-700 leading-[1.85] font-medium border-t border-slate-100">
-                                「マーケティング戦略を整理したい」「何から着手すべきかわからない」「リードはあるが商談につながらない」「ウェビナーやメールマーケティングを改善したい」「既存顧客の解約を減らしたい」など、BtoBマーケティングに関する幅広い課題に対応しています。
-                            </div>
-                        </details>
-
-                        <!-- Q3 -->
-                        <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
-                            <summary class="flex items-start sm:items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none">
-                                <div class="flex items-start sm:items-center gap-3.5">
-                                    <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">Q</span>
-                                    <h3 class="text-[15px] sm:text-base font-extrabold text-slate-900 leading-snug">戦略だけでなく、施策の実行も依頼できますか？</h3>
-                                </div>
-                                <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 flex items-center justify-center shrink-0 group-open:rotate-180 group-open:bg-indigo-50 group-open:text-indigo-600 group-open:border-indigo-200 transition-transform mt-0.5 sm:mt-0">
-                                    <i class="fa-solid fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 pl-5 sm:pl-[62px] text-sm sm:text-[15px] text-slate-700 leading-[1.85] font-medium border-t border-slate-100">
-                                はい。戦略設計だけでなく、必要な施策の企画・実行・改善まで支援します。
-                            </div>
-                        </details>
-
-                        <!-- Q4 -->
-                        <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
-                            <summary class="flex items-start sm:items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none">
-                                <div class="flex items-start sm:items-center gap-3.5">
-                                    <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">Q</span>
-                                    <h3 class="text-[15px] sm:text-base font-extrabold text-slate-900 leading-snug">マーケティング施策の一部だけを依頼することはできますか？</h3>
-                                </div>
-                                <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 flex items-center justify-center shrink-0 group-open:rotate-180 group-open:bg-indigo-50 group-open:text-indigo-600 group-open:border-indigo-200 transition-transform mt-0.5 sm:mt-0">
-                                    <i class="fa-solid fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 pl-5 sm:pl-[62px] text-sm sm:text-[15px] text-slate-700 leading-[1.85] font-medium border-t border-slate-100">
-                                可能です。ただし、施策単体の代行だけではなく、事業やマーケティング全体の状況を確認したうえで、必要な施策をご提案します。
-                            </div>
-                        </details>
-
-                        <!-- Q5 -->
-                        <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
-                            <summary class="flex items-start sm:items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none">
-                                <div class="flex items-start sm:items-center gap-3.5">
-                                    <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">Q</span>
-                                    <h3 class="text-[15px] sm:text-base font-extrabold text-slate-900 leading-snug">ウェビナーやメールマーケティングなど、施策の実行代行もできますか？</h3>
-                                </div>
-                                <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 flex items-center justify-center shrink-0 group-open:rotate-180 group-open:bg-indigo-50 group-open:text-indigo-600 group-open:border-indigo-200 transition-transform mt-0.5 sm:mt-0">
-                                    <i class="fa-solid fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 pl-5 sm:pl-[62px] text-sm sm:text-[15px] text-slate-700 leading-[1.85] font-medium border-t border-slate-100">
-                                はい。ウェビナーの企画・集客・運営・フォローアップ、メールマーケティング、リードナーチャリング、コンテンツ企画など、必要に応じて実行まで支援します。
-                            </div>
-                        </details>
-
-                        <!-- Q6 -->
-                        <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
-                            <summary class="flex items-start sm:items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none">
-                                <div class="flex items-start sm:items-center gap-3.5">
-                                    <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">Q</span>
-                                    <h3 class="text-[15px] sm:text-base font-extrabold text-slate-900 leading-snug">マーケティング担当者が社内にいなくても依頼できますか？</h3>
-                                </div>
-                                <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 flex items-center justify-center shrink-0 group-open:rotate-180 group-open:bg-indigo-50 group-open:text-indigo-600 group-open:border-indigo-200 transition-transform mt-0.5 sm:mt-0">
-                                    <i class="fa-solid fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 pl-5 sm:pl-[62px] text-sm sm:text-[15px] text-slate-700 leading-[1.85] font-medium border-t border-slate-100">
-                                はい。社内にマーケティングの専門人材がいない企業でもご相談いただけます。現在の事業状況や営業体制を整理し、優先すべきマーケティング施策から設計します。
-                            </div>
-                        </details>
-
-                        <!-- Q7 -->
-                        <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
-                            <summary class="flex items-start sm:items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none">
-                                <div class="flex items-start sm:items-center gap-3.5">
-                                    <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">Q</span>
-                                    <h3 class="text-[15px] sm:text-base font-extrabold text-slate-900 leading-snug">契約期間はどのくらいですか？</h3>
-                                </div>
-                                <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 flex items-center justify-center shrink-0 group-open:rotate-180 group-open:bg-indigo-50 group-open:text-indigo-600 group-open:border-indigo-200 transition-transform mt-0.5 sm:mt-0">
-                                    <i class="fa-solid fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 pl-5 sm:pl-[62px] text-sm sm:text-[15px] text-slate-700 leading-[1.85] font-medium border-t border-slate-100">
-                                案件の内容や支援範囲によって異なります。単発の戦略設計から、継続的なマーケティング支援まで対応しています。まずは現在の課題やご希望の支援内容をお聞かせください。
-                            </div>
-                        </details>
-
-                        <!-- Q8 -->
-                        <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
-                            <summary class="flex items-start sm:items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none">
-                                <div class="flex items-start sm:items-center gap-3.5">
-                                    <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">Q</span>
-                                    <h3 class="text-[15px] sm:text-base font-extrabold text-slate-900 leading-snug">対応できない業務はありますか？</h3>
-                                </div>
-                                <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 flex items-center justify-center shrink-0 group-open:rotate-180 group-open:bg-indigo-50 group-open:text-indigo-600 group-open:border-indigo-200 transition-transform mt-0.5 sm:mt-0">
-                                    <i class="fa-solid fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 pl-5 sm:pl-[62px] text-sm sm:text-[15px] text-slate-700 leading-[1.85] font-medium border-t border-slate-100">
-                                業務内容や稼働条件によっては、お引き受けできない場合があります。特に、単純な作業量を前提とした大量の運用代行などは、事前に内容を確認させていただきます。
-                            </div>
-                        </details>
-
-                        <!-- Q9 -->
-                        <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
-                            <summary class="flex items-start sm:items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none">
-                                <div class="flex items-start sm:items-center gap-3.5">
-                                    <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">Q</span>
-                                    <h3 class="text-[15px] sm:text-base font-extrabold text-slate-900 leading-snug">料金はいくらですか？</h3>
-                                </div>
-                                <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 flex items-center justify-center shrink-0 group-open:rotate-180 group-open:bg-indigo-50 group-open:text-indigo-600 group-open:border-indigo-200 transition-transform mt-0.5 sm:mt-0">
-                                    <i class="fa-solid fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 pl-5 sm:pl-[62px] text-sm sm:text-[15px] text-slate-700 leading-[1.85] font-medium border-t border-slate-100">
-                                支援内容や稼働時間、契約期間によって異なります。現在の課題や必要な支援範囲を確認したうえで、個別にお見積もりします。
-                            </div>
-                        </details>
-
-                        <!-- Q10 -->
-                        <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
-                            <summary class="flex items-start sm:items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none">
-                                <div class="flex items-start sm:items-center gap-3.5">
-                                    <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">Q</span>
-                                    <h3 class="text-[15px] sm:text-base font-extrabold text-slate-900 leading-snug">オンラインでの支援は可能ですか？</h3>
-                                </div>
-                                <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 flex items-center justify-center shrink-0 group-open:rotate-180 group-open:bg-indigo-50 group-open:text-indigo-600 group-open:border-indigo-200 transition-transform mt-0.5 sm:mt-0">
-                                    <i class="fa-solid fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 pl-5 sm:pl-[62px] text-sm sm:text-[15px] text-slate-700 leading-[1.85] font-medium border-t border-slate-100">
-                                はい。基本的にオンラインで対応しています。必要に応じて、オンライン会議やチャットなどを活用しながら支援します。
-                            </div>
-                        </details>
-
-                        <!-- Q11 -->
-                        <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
-                            <summary class="flex items-start sm:items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none">
-                                <div class="flex items-start sm:items-center gap-3.5">
-                                    <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">Q</span>
-                                    <h3 class="text-[15px] sm:text-base font-extrabold text-slate-900 leading-snug">まず相談だけすることはできますか？</h3>
-                                </div>
-                                <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 flex items-center justify-center shrink-0 group-open:rotate-180 group-open:bg-indigo-50 group-open:text-indigo-600 group-open:border-indigo-200 transition-transform mt-0.5 sm:mt-0">
-                                    <i class="fa-solid fa-chevron-down text-xs"></i>
-                                </span>
-                            </summary>
-                            <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 pl-5 sm:pl-[62px] text-sm sm:text-[15px] text-slate-700 leading-[1.85] font-medium border-t border-slate-100">
-                                はい。現在のマーケティング課題や今後取り組みたいことをお聞かせください。具体的な依頼内容が決まっていない段階でもご相談いただけます。
-                            </div>
-                        </details>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. REPRESENTATIVE PROFILE (代表プロフィール - FAQの後に配置) -->
+        <!-- 6. REPRESENTATIVE PROFILE (代表プロフィール - モダン・エディトリアルデザインに刷新) -->
         <section id="sec-why" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="rounded-3xl bg-white border border-slate-200 px-6 py-9 sm:p-10 lg:p-12 shadow-sm">
+            <div class="rounded-3xl bg-white border border-slate-200 p-6 sm:p-10 lg:p-12 shadow-sm">
                 <div class="max-w-5xl mx-auto">
                     
                     <!-- Section Title -->
-                    <div class="mb-8 pb-5 border-b border-slate-200/80 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                    <div class="mb-7 sm:mb-8 pb-5 border-b border-slate-200/80 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
                         <div>
-                            <span class="text-xs font-bold tracking-widest uppercase block mb-2 gradient-text-subtle">REPRESENTATIVE & ABOUT</span>
+                            <span class="text-xs font-bold tracking-widest uppercase block mb-1.5 gradient-text-subtle">REPRESENTATIVE & ABOUT</span>
                             <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">代表プロフィール</h2>
                         </div>
                     </div>
@@ -967,7 +766,7 @@
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
                         
                         <!-- Left Column: Photo, Name & Credentials -->
-                        <div class="lg:col-span-4 space-y-6">
+                        <div class="lg:col-span-4 space-y-5">
                             <div class="flex flex-col sm:flex-row lg:flex-col items-center sm:items-start gap-4">
                                 <div class="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-100 shrink-0">
                                     <img 
@@ -980,14 +779,14 @@
                                 <div class="text-center sm:text-left">
                                     <p class="text-xs font-bold text-indigo-600 tracking-wider mb-1">オプティア 代表</p>
                                     <h3 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">相場 慎太郎</h3>
-                                    <p class="text-xs text-slate-500 font-semibold tracking-widest uppercase mt-1">Shintaro Aiba</p>
+                                    <p class="text-xs text-slate-500 font-semibold tracking-widest uppercase mt-0.5">Shintaro Aiba</p>
                                 </div>
                             </div>
 
                             <!-- Credentials & Certifications -->
                             <div class="pt-5 border-t border-slate-200/80 space-y-3">
                                 <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">実績・保有資格</div>
-                                <ul class="space-y-2.5 text-sm text-slate-800 font-bold">
+                                <ul class="space-y-2 text-sm text-slate-800 font-bold">
                                     <li class="flex items-center gap-2.5">
                                         <i class="fa-solid fa-circle-check text-indigo-600 text-xs"></i>
                                         <span>マーケティング経験 8年</span>
@@ -1010,8 +809,8 @@
 
                         <!-- Right Column: Narrative & Career History -->
                         <div class="lg:col-span-8 space-y-6">
-                            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-[1.45] sm:leading-snug">
-                                BtoBの実務経験とマーケティング責任者としての事業視点を活かし、<span class="gradient-text">戦略から実行まで支援します。</span>
+                            <h3 class="text-lg sm:text-2xl font-extrabold text-slate-900 leading-snug">
+                                BtoBの実務経験と、事業会社のマーケティング責任者としての事業視点を活かし、<span class="gradient-text">戦略から実行まで支援します。</span>
                             </h3>
 
                             <div class="space-y-4 text-slate-700 text-[15px] sm:text-base leading-[1.85] font-medium">
@@ -1020,10 +819,7 @@
                                 </p>
 
                                 <p>
-                                    また、事業会社のマーケティング責任者として、BtoC領域の戦略の立案から実行・改善まで携わってきました。
-                                </p>
-
-                                <p>
+                                    また、事業会社のマーケティング責任者として、BtoC領域の戦略の立案から実行・改善まで携わってきました。<br class="hidden sm:inline">
                                     こうした経験を活かし、施策単体ではなく<strong class="font-bold text-slate-900">「誰に、何を、どのように届け、どう事業成果につなげるか」</strong>までを考えたマーケティング戦略を設計します。
                                 </p>
 
@@ -1038,17 +834,219 @@
             </div>
         </section>
 
+        <!-- 7. FAQ (よくあるご質問) -->
+        <section id="sec-faq" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="rounded-3xl bg-white border border-slate-200 p-5 sm:p-10 lg:p-12 shadow-sm">
+                <div class="text-center max-w-3xl mx-auto mb-7 sm:mb-10">
+                    <span class="text-xs font-bold tracking-wider uppercase block mb-1.5 gradient-text-subtle">FAQ</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">よくあるご質問</h2>
+                    <p class="text-slate-600 text-sm sm:text-base mt-2 font-medium">ご相談や支援内容に関して、よくいただくご質問をまとめました。</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-3 sm:space-y-4">
+                    
+                    <!-- FAQ 01 -->
+                    <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all" open>
+                        <summary class="flex items-start sm:items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer list-none font-extrabold text-slate-900 text-[15px] sm:text-base leading-snug select-none">
+                            <div class="flex items-start gap-3">
+                                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-black shrink-0 mt-0.5 sm:mt-0">Q</span>
+                                <span>どのような企業が対象ですか？</span>
+                            </div>
+                            <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-indigo-600 flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </span>
+                        </summary>
+                        <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 border-t border-slate-100 text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium flex items-start gap-3">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200 text-slate-700 text-xs font-black shrink-0 mt-0.5">A</span>
+                            <p>BtoB企業を中心に、マーケティングを強化したい企業を対象としています。特に、SaaS・AI・ITサービスなど、マーケティングによる顧客獲得や事業成長を目指す企業との相性が良いです。</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 02 -->
+                    <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
+                        <summary class="flex items-start sm:items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer list-none font-extrabold text-slate-900 text-[15px] sm:text-base leading-snug select-none">
+                            <div class="flex items-start gap-3">
+                                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-black shrink-0 mt-0.5 sm:mt-0">Q</span>
+                                <span>どのような課題を相談できますか？</span>
+                            </div>
+                            <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-indigo-600 flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </span>
+                        </summary>
+                        <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 border-t border-slate-100 text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium flex items-start gap-3">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200 text-slate-700 text-xs font-black shrink-0 mt-0.5">A</span>
+                            <p>「マーケティング戦略を整理したい」「何から着手すべきかわからない」「リードはあるが商談につながらない」「ウェビナーやメールマーケティングを改善したい」「既存顧客の解約を減らしたい」など、BtoBマーケティングに関する幅広い課題に対応しています。</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 03 -->
+                    <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
+                        <summary class="flex items-start sm:items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer list-none font-extrabold text-slate-900 text-[15px] sm:text-base leading-snug select-none">
+                            <div class="flex items-start gap-3">
+                                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-black shrink-0 mt-0.5 sm:mt-0">Q</span>
+                                <span>戦略だけでなく、施策の実行も依頼できますか？</span>
+                            </div>
+                            <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-indigo-600 flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </span>
+                        </summary>
+                        <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 border-t border-slate-100 text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium flex items-start gap-3">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200 text-slate-700 text-xs font-black shrink-0 mt-0.5">A</span>
+                            <p>はい。戦略設計だけでなく、必要な施策の企画・実行・改善まで支援します。</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 04 -->
+                    <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
+                        <summary class="flex items-start sm:items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer list-none font-extrabold text-slate-900 text-[15px] sm:text-base leading-snug select-none">
+                            <div class="flex items-start gap-3">
+                                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-black shrink-0 mt-0.5 sm:mt-0">Q</span>
+                                <span>マーケティング施策の一部だけを依頼することはできますか？</span>
+                            </div>
+                            <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-indigo-600 flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </span>
+                        </summary>
+                        <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 border-t border-slate-100 text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium flex items-start gap-3">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200 text-slate-700 text-xs font-black shrink-0 mt-0.5">A</span>
+                            <p>可能です。ただし、施策単体の代行だけではなく、事業やマーケティング全体の状況を確認したうえで、必要な施策をご提案します。</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 05 -->
+                    <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
+                        <summary class="flex items-start sm:items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer list-none font-extrabold text-slate-900 text-[15px] sm:text-base leading-snug select-none">
+                            <div class="flex items-start gap-3">
+                                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-black shrink-0 mt-0.5 sm:mt-0">Q</span>
+                                <span>ウェビナーやメールマーケティングなど、施策の実行代行もできますか？</span>
+                            </div>
+                            <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-indigo-600 flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </span>
+                        </summary>
+                        <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 border-t border-slate-100 text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium flex items-start gap-3">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200 text-slate-700 text-xs font-black shrink-0 mt-0.5">A</span>
+                            <p>はい。ウェビナーの企画・集客・運営・フォローアップ、メールマーケティング、リードナーチャリング、コンテンツ企画など、必要に応じて実行まで支援します。</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 06 -->
+                    <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
+                        <summary class="flex items-start sm:items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer list-none font-extrabold text-slate-900 text-[15px] sm:text-base leading-snug select-none">
+                            <div class="flex items-start gap-3">
+                                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-black shrink-0 mt-0.5 sm:mt-0">Q</span>
+                                <span>マーケティング担当者が社内にいなくても依頼できますか？</span>
+                            </div>
+                            <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-indigo-600 flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </span>
+                        </summary>
+                        <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 border-t border-slate-100 text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium flex items-start gap-3">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200 text-slate-700 text-xs font-black shrink-0 mt-0.5">A</span>
+                            <p>はい。社内にマーケティングの専門人材がいない企業でもご相談いただけます。現在の事業状況や営業体制を整理し、優先すべきマーケティング施策から設計します。</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 07 -->
+                    <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
+                        <summary class="flex items-start sm:items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer list-none font-extrabold text-slate-900 text-[15px] sm:text-base leading-snug select-none">
+                            <div class="flex items-start gap-3">
+                                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-black shrink-0 mt-0.5 sm:mt-0">Q</span>
+                                <span>契約期間はどのくらいですか？</span>
+                            </div>
+                            <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-indigo-600 flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </span>
+                        </summary>
+                        <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 border-t border-slate-100 text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium flex items-start gap-3">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200 text-slate-700 text-xs font-black shrink-0 mt-0.5">A</span>
+                            <p>案件の内容や支援範囲によって異なります。単発の戦略設計から、継続的なマーケティング支援まで対応しています。まずは現在の課題やご希望の支援内容をお聞かせください。</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 08 -->
+                    <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
+                        <summary class="flex items-start sm:items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer list-none font-extrabold text-slate-900 text-[15px] sm:text-base leading-snug select-none">
+                            <div class="flex items-start gap-3">
+                                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-black shrink-0 mt-0.5 sm:mt-0">Q</span>
+                                <span>対応できない業務はありますか？</span>
+                            </div>
+                            <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-indigo-600 flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </span>
+                        </summary>
+                        <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 border-t border-slate-100 text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium flex items-start gap-3">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200 text-slate-700 text-xs font-black shrink-0 mt-0.5">A</span>
+                            <p>業務内容や稼働条件によっては、お引き受けできない場合があります。特に、単純な作業量を前提とした大量の運用代行などは、事前に内容を確認させていただきます。</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 09 -->
+                    <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
+                        <summary class="flex items-start sm:items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer list-none font-extrabold text-slate-900 text-[15px] sm:text-base leading-snug select-none">
+                            <div class="flex items-start gap-3">
+                                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-black shrink-0 mt-0.5 sm:mt-0">Q</span>
+                                <span>料金はいくらですか？</span>
+                            </div>
+                            <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-indigo-600 flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </span>
+                        </summary>
+                        <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 border-t border-slate-100 text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium flex items-start gap-3">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200 text-slate-700 text-xs font-black shrink-0 mt-0.5">A</span>
+                            <p>支援内容や稼働時間、契約期間によって異なります。現在の課題や必要な支援範囲を確認したうえで、個別にお見積もりします。</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 10 -->
+                    <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
+                        <summary class="flex items-start sm:items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer list-none font-extrabold text-slate-900 text-[15px] sm:text-base leading-snug select-none">
+                            <div class="flex items-start gap-3">
+                                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-black shrink-0 mt-0.5 sm:mt-0">Q</span>
+                                <span>オンラインでの支援は可能ですか？</span>
+                            </div>
+                            <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-indigo-600 flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </span>
+                        </summary>
+                        <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 border-t border-slate-100 text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium flex items-start gap-3">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200 text-slate-700 text-xs font-black shrink-0 mt-0.5">A</span>
+                            <p>はい。基本的にオンラインで対応しています。必要に応じて、オンライン会議やチャットなどを活用しながら支援します。</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ 11 -->
+                    <details class="group rounded-2xl bg-slate-50/90 border border-slate-200/90 open:bg-white open:border-indigo-200 open:shadow-sm transition-all">
+                        <summary class="flex items-start sm:items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer list-none font-extrabold text-slate-900 text-[15px] sm:text-base leading-snug select-none">
+                            <div class="flex items-start gap-3">
+                                <span class="px-2 py-0.5 rounded-md bg-indigo-600 text-white text-xs font-black shrink-0 mt-0.5 sm:mt-0">Q</span>
+                                <span>まず相談だけすることはできますか？</span>
+                            </div>
+                            <span class="w-7 h-7 rounded-full bg-white border border-slate-200 text-indigo-600 flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </span>
+                        </summary>
+                        <div class="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 border-t border-slate-100 text-sm sm:text-[15px] text-slate-700 leading-[1.8] font-medium flex items-start gap-3">
+                            <span class="px-2 py-0.5 rounded-md bg-slate-200 text-slate-700 text-xs font-black shrink-0 mt-0.5">A</span>
+                            <p>はい。現在のマーケティング課題や今後取り組みたいことをお聞かせください。具体的な依頼内容が決まっていない段階でもご相談いただけます。</p>
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
         <!-- 8. FINAL CTA & CONTACT FORM (シンプルなお問い合わせセクション) -->
         <section id="sec-contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="rounded-3xl bg-slate-900 text-white px-6 py-10 sm:p-12 shadow-xl relative overflow-hidden border border-slate-800">
+            <div class="rounded-3xl bg-slate-900 text-white p-6 sm:p-12 shadow-xl relative overflow-hidden border border-slate-800">
                 
                 <!-- Section Header -->
-                <div class="max-w-2xl mx-auto text-center mb-8 sm:mb-9">
-                    <span class="inline-block px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 text-xs font-bold uppercase tracking-widest mb-3">CONTACT</span>
-                    <h2 class="text-2xl sm:text-3xl font-black text-white leading-tight mb-3.5">
+                <div class="max-w-2xl mx-auto text-center mb-8">
+                    <span class="inline-block px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 text-xs font-bold uppercase tracking-widest mb-2.5">CONTACT</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white leading-tight mb-3">
                         無料相談・お問い合わせ
                     </h2>
-                    <p class="text-sm sm:text-base text-slate-300 leading-[1.8] font-medium">
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-medium text-left sm:text-center">
                         「何から改善すべきかわからない」という段階でもお気軽にご相談ください。<br class="hidden sm:inline">
                         原則3営業日以内に折り返しご連絡いたします。
                     </p>
@@ -1143,8 +1141,8 @@
                     <a href="#sec-services" class="hover:text-white transition-colors">サービス内容</a>
                     <a href="#sec-cases" class="hover:text-white transition-colors">実績・事例</a>
                     <a href="#sec-flow" class="hover:text-white transition-colors">支援の流れ</a>
-                    <a href="#sec-faq" class="hover:text-white transition-colors">よくある質問</a>
                     <a href="#sec-why" class="hover:text-white transition-colors">代表プロフィール</a>
+                    <a href="#sec-faq" class="hover:text-white transition-colors">FAQ</a>
                     <a href="#sec-contact" class="hover:text-white transition-colors">無料相談</a>
                 </div>
             </div>
