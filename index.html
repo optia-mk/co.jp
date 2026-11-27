@@ -997,9 +997,9 @@
                         <div class="space-y-2">
                             <span class="text-xs sm:text-sm font-extrabold text-indigo-600 tracking-wider block">お問い合わせ先メールアドレス</span>
                             <div class="py-3.5 px-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center">
-                                <a href="mailto:optia@outlook.jp" class="font-mono text-lg sm:text-2xl font-black text-slate-900 hover:text-indigo-600 transition-colors select-all break-all">
+                                <span class="font-mono text-lg sm:text-2xl font-black text-slate-900 select-all break-all">
                                     optia@outlook.jp
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1008,10 +1008,27 @@
                                 <i class="fa-regular fa-copy"></i>
                                 <span>メールアドレスをコピー</span>
                             </button>
-                            <a href="mailto:optia@outlook.jp" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-extrabold text-sm sm:text-base transition-colors flex items-center justify-center gap-2">
+                            <button type="button" onclick="openMailClient()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-extrabold text-sm sm:text-base transition-colors flex items-center justify-center gap-2">
                                 <i class="fa-regular fa-envelope"></i>
                                 <span>メールソフトを起動</span>
-                            </a>
+                            </button>
+                        </div>
+
+                        <!-- Webメール利用者向けの直接作成リンク -->
+                        <div class="pt-4 border-t border-slate-100 space-y-2.5">
+                            <p class="text-xs text-slate-500 font-medium">
+                                メールソフトが起動しない場合は、お使いのWebメールから直接お送りください
+                            </p>
+                            <div class="flex flex-wrap items-center justify-center gap-2">
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=optia@outlook.jp&su=%E3%80%90%E3%82%AA%E3%83%97%E3%83%86%E3%82%A3%E3%82%A2%E3%80%91%E7%84%A1%E6%96%99%E7%9B%B8%E8%AB%87%E3%83%BB%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B&body=%E8%B2%B4%E7%A4%BE%E5%90%8D%EF%BC%9A%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0A" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-50 hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 border border-slate-200 hover:border-indigo-200 text-xs font-bold transition-colors inline-flex items-center gap-1.5">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                    <span>Gmailで作成</span>
+                                </a>
+                                <a href="https://outlook.live.com/mail/0/deeplink/compose?to=optia@outlook.jp&subject=%E3%80%90%E3%82%AA%E3%83%97%E3%83%86%E3%82%A3%E3%82%A2%E3%80%91%E7%84%A1%E6%96%99%E7%9B%B8%E8%AB%87%E3%83%BB%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B&body=%E8%B2%B4%E7%A4%BE%E5%90%8D%EF%BC%9A%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0A" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-50 hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 border border-slate-200 hover:border-indigo-200 text-xs font-bold transition-colors inline-flex items-center gap-1.5">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                    <span>Outlook Webで作成</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1096,6 +1113,32 @@
 
         function copyEmailAddress() {
             copyToClipboardText('optia@outlook.jp', 'メールアドレス (optia@outlook.jp) をコピーしました');
+        }
+
+        function openMailClient() {
+            const to = 'optia@outlook.jp';
+            const subject = encodeURIComponent('【オプティア】無料相談・お問い合わせ');
+            const body = encodeURIComponent('貴社名：\nお名前：\nご相談内容：\n');
+            const mailtoUrl = `mailto:${to}?subject=${subject}&body=${body}`;
+
+            // アドレスも同時にコピーして、万が一メーラーが開かない場合でもそのまま貼り付けられるようにする
+            copyToClipboardText(to, 'メールアドレスをコピーし、メールソフトを起動しています...');
+
+            // iFrame環境やスマートフォンでも確実に動作するよう最上位ウィンドウ経由で起動
+            try {
+                if (window.top && window.top !== window) {
+                    window.top.location.href = mailtoUrl;
+                } else {
+                    window.location.href = mailtoUrl;
+                }
+            } catch (e) {
+                const a = document.createElement('a');
+                a.href = mailtoUrl;
+                a.target = '_top';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
         }
 
         function showToast(message) {
